@@ -1,6 +1,6 @@
 ---
 layout: post
-category: uva-problem-sets
+category: uva-problem-set
 title: 101 - The Blocks Problem
 ---
 

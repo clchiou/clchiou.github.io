@@ -1,6 +1,6 @@
 ---
 layout: post
-category: uva-problem-sets
+category: uva-problem-set
 title: 102 - Ecological Bin Packing
 ---
 
