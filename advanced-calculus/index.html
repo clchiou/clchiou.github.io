@@ -1,0 +1,13 @@
+---
+layout: index
+title: Advanced Calculus
+summary: Lecture Notes of Advanced Calculus Fall 2009 and Spring 2010
+---
+<div class="toc">
+{% for post in site.categories['advanced-calculus'] %}
+<article class="toc-item">
+  <h3 class="toc-title"><a class="toc-title" href="{{ post.url }}">{{ post.title }}</a></h3>
+  <a class="toc-snippet" href="{{ post.url }}"><p class="toc-snippet">{{ post.excerpt | strip_html }}</p></a>
+</article>
+{% endfor %}
+</div>
