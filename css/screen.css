@@ -109,3 +109,13 @@ p {
 a {
   color: #0b0080;
 }
+
+ol.compact {
+  margin-bottom: 0px;
+  margin-top: -30px;
+}
+
+ul.compact {
+  margin-bottom: 0px;
+  margin-top: -30px;
+}
