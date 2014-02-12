@@ -1,0 +1,65 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 2
+---
+
+h3. Multiplication
+
+We defined addition $+$ and additive inverse $-\xi$ in the "last lecture note.":/advanced-calculus/2014-01-02/lecture-1/
+
+Note that a real number is a non-decreasing sequence; we will need to maintain this property after multiplications.
+
+_Definition._ Let $\xi, \eta \in \mathbb{R},$ define multiplication of $\xi$ and $\eta$ as:
+
+<p>
+<ol class="compact">
+<li>$\xi = 0$ or $\eta = 0, \xi \cdot \eta \stackrel{\small{\text{def}}}{=} 0$</li>
+<li>$\xi \gt 0, \eta \gt 0, \xi \cdot \eta \stackrel{\small{\text{def}}}{=} \{ x_1 \cdot y_1, \dotso \}$</li>
+<li><notextile>
+  $\xi \gt 0, \eta \lt 0, \xi \cdot \eta \stackrel{\small{\text{def}}}{=} -(\xi \cdot (-\eta))$
+  $\xi \lt 0, \eta \gt 0, \xi \cdot \eta \stackrel{\small{\text{def}}}{=} -((-\xi) \cdot \eta)$
+  </notextile></li>
+<li>$\xi \lt 0, \eta \lt 0, \xi \cdot \eta \stackrel{\small{\text{def}}}{=} (-\xi) \cdot (-\eta)$</li>
+</ol>
+</p>
+
+_Remarks._
+
+<p>
+<ol class="compact">
+<li>Existence of $1$</li>
+<li>Commutativity</li>
+<li>Distributivity: $(\xi + \eta) \cdot \zeta = \xi\cdot\zeta + \eta\cdot\zeta$</li>
+<li>Associativity</li>
+<li>Existence of multiplicative inverse</li>
+</ol>
+</p>
+
+_Proof._ (Existence of multiplicative inverse)
+
+<p>
+<ul class="compact no-bullet">
+<li>Without loss of generality, pick $\xi \sim X = \{ x_i \gt 0 \}.$</li>
+<li>Let $\eta \sim Y = \{ \frac{-1}{x_1}, \frac{-1}{x_2}, \frac{-1}{x_3}, \dotso \},$ which is non-decreasing and bounded.</li>
+<li>Then $\xi\cdot\eta = -1.$ Let $\zeta = -\eta.$</li>
+<li>Since $0 = \xi\cdot(\eta+\zeta) = \xi\eta + \xi\zeta = -1 + \xi\zeta,$</li>
+<li>We have $\xi\zeta = 1.$</li>
+</ul>
+</p>
+
+_Proof._ ($\xi\cdot\eta = -1$)
+
+<p>
+<ul class="compact no-bullet">
+<li>$\exists r \in \mathbb{Q}$ s.t. $z_n = \frac{-1}{x_n} + r \gt 0$ for all $n.$</li>
+<li>$\xi(\eta + r) \sim \{ x_1(\frac{-1}{x_1}+r), \dotso \} \sim -1 + \xi r.$</li>
+<li>$\therefore \xi\cdot\eta = -1.$</li>
+</ul>
+</p>
+
+We write $\frac{1}{\xi}$ to denote the multiplicative inverse of $\xi.$
+
+Alternatively we may prove it by construction (similar to prove existence of additive inverse in the last lecture note).
+
+Exercise: Prove that multiplication is well-defined.

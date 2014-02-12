@@ -119,3 +119,7 @@ ul.compact {
   margin-bottom: 0px;
   margin-top: -30px;
 }
+
+ul.no-bullet {
+  list-style: none;
+}
