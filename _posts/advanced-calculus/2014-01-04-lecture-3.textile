@@ -1,0 +1,71 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 3
+---
+
+h3. Completeness and least-upper-bound property
+
+Rational numbers are incomplete, that is, there are holes among them; for example, the set $\{ x \in \mathbb{Q} | x^2 \lt 2 \}$ does not have least upper bound (LUB) in $\mathbb{Q},$ i.e., there is non-decreasing, bounded sequence $x_n \in \mathbb{Q}$ that $\lim r_n \notin \mathbb{Q}.$ Real numbers are constructed to fill in these holes.
+
+_Theorem._ Given $a_n \in \mathbb{R}, a_n \lt a_{n+1}$ and bounded, then $\{ a_n \}$ has LUB.
+_Proof._
+
+<p>
+<ul class="compact no-bullet">
+<li>Pick $\{ x_{n,1}, \dotso \} \sim a_n$ s.t. $x_{n,k} \lt x_{n,k+1}$</li>
+<li>$\because a_n \lt a_{n+1}$</li>
+<li>$\therefore \exists k$ s.t. $a_n < x_{n+1,k},$ i.e., $\forall i, x_{n,i} < x_{n+1,k}$</li>
+<li>Let
+  <ul class="compact">
+  <li>$y_1 = x_{1,1}$</li>
+  <li>$y_2 = x_{2,k}$ s.t. $\forall i, x_{1,i} \lt y_2$</li>
+  <li>$y_3 = x_{3,k}$ s.t. $\forall i, x_{2,i} \lt y_3$</li>
+  <li>And so on</li>
+  </ul>
+</li>
+<li>Then $\{ y_n \}$ is non-decreasing and bounded</li>
+<li>Note:
+  <ul class="compact">
+  <li>$y_n \in \mathbb{Q}$</li>
+  <li>$y_n \gt a_{n-1}$ (we are almost done)</li>
+  </ul>
+</li>
+<li>Let $\alpha$ represent the class that $\{ y_n \}$ belongs to ($\alpha \sim \{ y_n \}$).
+  <ol class="compact">
+  <li>$\forall n, \alpha \geq a_n,$ i.e., $\alpha$ is an upper bound of $\{ a_n \}$</li>
+  <li>Let $\beta$ be an upper bound of $\{ a_n \}$
+    <ul class="compact no-bullet">
+    <li>$\because a_n \leq \beta,$ i.e., $\forall k, x_{n,k} \leq \beta$</li>
+    <li>$\therefore \forall n, y_n \leq \beta,$ i.e., $\alpha \leq \beta$</li>
+    </ul>
+  </li>
+  </ol>
+</li>
+<li>Because 1 and 2 above, $\alpha$ is the LUB of $\{ a_n \}$</li>
+</ul>
+</p>
+
+_Corollary._ Given $a_n \in \mathbb{R}, a_n \leq a_{n+1}$ and bounded, then $\{ a_n \}$ has LUB.
+_Proof._
+
+<p>
+<ul class="compact no-bullet">
+<li>Consider two alternatives:
+  <ol class="compact">
+  <li>If $\exists N$ s.t. $\forall n \geq N, a_n = a_N,$ then $a_N$ is LUB</li>
+  <li>Otherwise $\forall m \exists n \gt m, a_n \gneqq a_m:$
+    <ul class="compact no-bullet">
+    <li><notextile>Pick $a'_1 = a_1$</notextile></li>
+    <li><notextile>Pick $a'_2 = a_{n_2}$ s.t. $a_{n_2} \gt a_1$ for smallest $n_2$</notextile></li>
+    <li><notextile>Pick $a'_3 = a_{n_3}$ s.t. $a_{n_3} \gt a_{n_2}$ for smallest $n_3$</notextile></li>
+    <li>And so on</li>
+    <li><notextile>Then $a'_n \in \mathbb{R}, a'_n \lt a'_{n+1}$ and bounded</notextile></li>
+    <li><notextile>Let $\alpha$ denote LUB of $\{ a'_n \}$</notextile></li>
+    <li>$\alpha$ is LUB of $\{ a_n \}$</li>
+    </ul>
+  </li>
+  </ol>
+</li>
+</ul>
+</p>
