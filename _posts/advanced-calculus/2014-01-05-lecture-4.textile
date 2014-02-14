@@ -1,0 +1,117 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 4
+---
+
+h3. Completeness and Bolzano-Weierstrass Theorem
+
+There are two versions of completeness:
+
+* Sequence version: $a_n \in \mathbb{R}, a_n \leq a_{n+1}$ and bounded $\Rightarrow \lim a_n \in \mathbb{R}.$
+
+* Set version: $S \subset \mathbb{R}, S \neq \emptyset,$ and $S$ bounded from above $\Rightarrow S$ has LUB.
+
+_Proof._ (Sequence version of completeness)
+
+<p>
+<ul class="compact no-bullet">
+<li>$\{ a_n \} \uparrow$ bounded, by "corollary":/advanced-calculus/2014-01-04/lecture-3, $\exists$ LUB $\alpha$</li>
+<li>Claim: $\alpha = \lim a_n$</li>
+<li>$\forall \epsilon \gt 0, \alpha - \epsilon$ is not an upper bound of $\{ a_n \}$</li>
+<li>(Otherwise $\alpha$ is not LUB)</li>
+<li>$\therefore \exists a_N \gt \alpha - \epsilon$</li>
+<li>$\therefore \forall n \gt N, a_n \gt \alpha - \epsilon$</li>
+<li>i.e., $\forall \epsilon \gt 0, \exists N$ s.t. $\forall n \gt N, |a_n - \alpha| \lt \epsilon$</li>
+</ul>
+</p>
+
+_Theorem._ (Nested Interval Theorem)
+Let $I_n = [a_n, b_n] = \{ x \in \mathbb{R} | a_n \leq x \leq b_n \}.$  If $I_n \supset I_{n+1}$ and $\lim b_n - a_n = 0,$ then $\exists! x_0 \in \mathbb{R}$ s.t. $\bigcap_{n=1}^\infty I_n = \{ x_0 \}.$
+
+_Proof._
+
+<p>
+<ul class="compact no-bullet">
+<li>$\because I_n \supset I_{n+1}$</li>
+<li>$\therefore a_n \lt a_{n+1}, b_{n+1} \lt b_n$</li>
+<li>$\{ a_n \} \uparrow$ and $\forall n, a_n \lt b_1 \Rightarrow \exists \alpha = \lim a_n$</li>
+<li>$\{ b_n \} \downarrow$ and $\forall n, b_n \gt a_1 \Rightarrow \exists \beta = \lim b_n$</li>
+<li>(We used the sequence version of completeness here.)</li>
+<li>$a_n \leq \alpha, \beta \leq b_n \Rightarrow 0 \leq \beta - \alpha \leq b_n - a_n \rightarrow 0$</li>
+<li>$\therefore \alpha = \beta$</li>
+<li>Let $x_0 = \alpha = \beta, \bigcap_{n=1}^\infty I_n = \{ x_0 \}$</li>
+</ul>
+</p>
+
+_Proof._ (Set version of completeness)
+
+<p>
+<ul class="compact no-bullet">
+<li>We will use bisection method:</li>
+<li>Let $b$ be an upper bound of $S$</li>
+<li>Pick $a \in S,$ let $m = \frac{a+b}{2}$
+  <ol class="compact">
+  <li>If $m$ is not an upper bound of $S,$ then $\exists a_1 \in S, a_1 \gt m$ and let $b_1 = b$</li>
+  <li>If $m$ is an upper bound of $S,$ then $a_1 = a, b_1 = m$</li>
+  </ol>
+</li>
+<li>and so on</li>
+<li>$| I_n | \leq \frac{b-a}{2^n}$ and $a_n \in S$ and $b_n$ is upper bounds of $S$</li>
+<li>By nested interval theorem, $\bigcap_{n=1}^\infty I_n = \{ x_0 \in \mathbb{R} \}$</li>
+<li>$x_0$ is LUB of $S$</li>
+<li>Note:</li>
+<li><notextile>$\because \lim a_n = x_0$</notextile></li>
+<li><notextile>$\therefore \forall x' \lt x_0, \exists a_n \gt x',$ so $x'$ is not an upper bound</notextile></li>
+<li><notextile>$\because \lim b_n = x_0$</notextile></li>
+<li><notextile>$\therefore \forall x'' \gt x_0, \exists b_n \lt x'',$ so $x''$ is not LUB</notextile></li>
+<li>So $x_0$ is LUB</li>
+</ul>
+</p>
+
+_Theorem._ (Bolzano-Weierstrass Theorem)
+Each bounded $\{ x_n \}$ has a convergent subsequence.
+
+_Proof._
+
+<p>
+<ul class="compact no-bullet">
+<li>Consider two cases:
+  <ol class="compact">
+  <li>$\{ x_n \}$ has finite values
+    <ul class="compact no-bullet">
+    <li>There must be some value occurred repeatedly infinite times</li>
+    <li>Construct a subsequence from elements of this value, and you will get a convergent subsequence</li>
+    </ul>
+  </li>
+  <li>There are infinitely many values in $\{ x_n \}$
+    <ul class="compact no-bullet">
+    <li>We will use bisection method</li>
+    <li>Let $\{ x_n \} \subset [a, b] = I$</li>
+    <li>Split $I$ into two equal parts, and one part must have infinitely many elements</li>
+    <li>Pick that part as $I_1 = [a_1, b_1]$</li>
+    <li><notextile>$|I_n| = b_n - a_n = \frac{b_{n-1} - a_{n-1}}{2} = \cdots = \frac{b-a}{2^n} \rightarrow 0$</notextile></li>
+    <li>$a_n \uparrow, a_n \leq b \Rightarrow \exists \alpha = \lim a_n$</li>
+    <li>$b_n \downarrow, b_n \geq a \Rightarrow \exists \beta = \lim b_n$</li>
+    <li>$\therefore \alpha = \beta$</li>
+    <li>Let $x_0 = \alpha = \beta$</li>
+    <li>Pick any $x_{n_k} \in I_k, a_k \leq x_{n_k} \leq b_k \Rightarrow \lim_{k\rightarrow\infty} x_{n_k} = x_0$</li>
+    </ul>
+  </li>
+  </ol>
+</li>
+</ul>
+</p>
+
+_Theorem._ (Bolzano-Weierstrass Theorem)
+Let $S \subset \mathbb{R}$ bounded and have infinite elements, $\exists$ convergent $\{ x_n \} \subseteq S.$
+
+Note:
+
+<p>
+<ul class="compact no-bullet">
+<li>Sequence version $\Rightarrow$ nested interval theorem $\Rightarrow$ set version</li>
+<li>Set version $\Rightarrow$ sequence version (treat $\{ x_n \}$ as $S$)</li>
+<li>$\therefore$ Sequence version $\Leftrightarrow$ set version</li>
+</ul>
+</p>
