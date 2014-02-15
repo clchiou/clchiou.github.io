@@ -1,0 +1,25 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 5
+---
+
+h3. Cauchy Criterion
+
+Consider the definition: \[\text{If}\:\forall \epsilon \gt 0, \exists N\:\text{s.t.}\:\forall n \gt N, |a_n - l| \lt \epsilon, \text{then}\:\lim_{n\rightarrow\infty} a_n \stackrel{\small{\text{def}}}{=} l.\]  The problem of it is that practically we have to find $l$ first.  Nevertheless, we can remove $l$ with a simple trick: $\forall \epsilon \gt 0, \text{let}\:\epsilon' = \frac{\epsilon}{2},$ \[\text{If}\:\exists N\:\text{s.t.}\:\forall m,n \gt N, |a_m-l|<\epsilon'\:\text{and}\:|a_n-l|<\epsilon',\]  Then we have \[|a_m-a_n| \leq |a_m-l| + |a_n-l| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon.\]  So the revised definition becomes: \[\text{If}\:\forall \epsilon > 0, \exists N\:\text{s.t.}\:\forall m, n > N, |a_m - a_n| < \epsilon,\:\text{then}\:\lim a_n\:\text{exists.}\]  And the converse is also true, which is called the Cauchy Criterion.
+
+_Theorem._ *Cauchy Criterion.*
+Given $\{ a_n \},$ \[\forall \epsilon > 0, \exists N\:\text{s.t.}\:\forall m,n > N, |a_m-a_n| < \epsilon \Leftrightarrow \lim a_n\:\text{exists.}\]
+
+Remark: The practical advantage of Cauchy Criterion is that we do not have to find $l.$  All we have to care about is the property of the sequence per se.
+
+_Proof._
+($\Rightarrow$) Because $\{ a_n \}$ is bounded, there exists a subsequence $\{ a_{n_k} \}$ that converges to some $l$ (recall "Bolzano-Weierstrass Theorem":/advanced-calculus/2014-01-05/lecture-4).  Then $\forall \epsilon > 0, \exists N\:\text{s.t.}\:\forall n, n_k > N,$ \[|a_{n_k}-l|<\frac{\epsilon}{2}\:\text{and}\:|a_{n_k}-a_n|<\frac{\epsilon}{2}.\]  In other words, \[|a_n-l| \leq |a_{n_k}-l| + |a_{n_k}-a_n| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon.\]  Thus, $\lim a_n$ converges to $l.$
+
+($\Leftarrow$) Let $\lim a_n = l.$ Then $\forall \epsilon, \exists N\:\text{s.t.}\:\forall m,n > N,$ \[|a_n-l|<\frac{\epsilon}{2}\:\text{and}\:|a_m-l|<\frac{\epsilon}{2}.\]  Thus, $|a_n-a_m|<\epsilon.$
+<notextile><center>***</center></notextile>
+
+The relationship of the theorems thus far:
+* Set version of completeness $\Rightarrow$ sequence version of completeness.
+* Sequence version of completeness $\Rightarrow$ Nested Interval Theorem $\Rightarrow$ set version of completeness.
+* Nested Interval Theorem $\Rightarrow$ Bolzano-Weierstrass Theorem $\Rightarrow$ Cauchy Criterion.
