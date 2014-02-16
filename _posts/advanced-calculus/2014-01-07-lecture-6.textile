@@ -1,0 +1,52 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 6
+---
+
+h3. Basic Topology and Measure
+
+_Theorem._  If $A_n$ is countable, then $\bigcup_{n=1}^\infty A_n$ is countable.
+
+_Proof._
+List elements of $A_n$ on a matrix,
+\[\begin{array}{lclll}
+A_1 & = & a_{11} & a_{12} & a_{13} & \dots \\
+A_2 & = & a_{21} & a_{22} & a_{23} & \dots \\
+A_3 & = & a_{31} & a_{32} & a_{33} & \dots \\
+\vdots & & \vdots & \vdots & \vdots & \ddots \\
+\end{array}\]
+And we may enumerate them as:
+\[ a_{11} \rightarrow a_{12} \rightarrow a_{21} \rightarrow a_{13} \rightarrow a_{22} \rightarrow a_{31} \rightarrow \cdots \]
+Thus $\bigcup_{n=1}^\infty A_n$ is countable.
+
+_Corollary._  $\mathbb{Q}$ is countable.
+
+_Proof._
+Let $Q_p = \{ \frac{p}{q} | q \in \mathbb{Z} \}, p \in \mathbb{N}.$  We have $\bigcup_{p=1}^\infty Q_p = \mathbb{Q}.$  Because $Q_p$ is countable, $\mathbb{Q}$ is also countable.
+
+_Theorem._ The real numbers in $(0, 1)$ is uncountable.
+
+_Proof._
+(Diagonal argument.)
+
+h4. Basic Topology
+
+_Definition._ Given two sets $A$ and $B,$
+* ${\small\#}A \leq {\small\#}B$ if $\exists f: A \mapsto B$ where $f$ is 1-to-1, and
+* ${\small\#}A = {\small\#}B$ if $\exists f: A \mapsto B$ where $f$ is 1-to-1 and onto.
+
+_Theorem._ If $A \stackrel{\small{\text{1-1}}}{\mapsto} B$ and $B \stackrel{\small{\text{1-1}}}{\mapsto} A,$ then ${\small\#}A = {\small\#}B.$
+
+There are many ways to "compare" infinite sets; you may compare them by counting, by measure, or by topology.
+E.g., $A = [0, 1], B = [0, 2]:$
+* Counting: ${\small\#}A = {\small\#}B.$
+* Measure and topology: $m(A) < m(B).$
+
+Rational numbers (countable) $\subsetneqq$ real algebraic numbers (still countable) $\subsetneqq$ real numbers (uncountable).  The construction of real numbers has built many, many numbers.
+
+h4. Basic Measure
+
+_Definition._ $m\Big((a, b)\Big) \stackrel{\small{\text{def}}}{=} b - a.$
+
+Let $Q = (0, 1) \cap \mathbb{Q} = \{ r_1, r_2, \dotsc \}$ be the rational numbers within $(0, 1).$  For all $\epsilon > 0,$ let $I_k = (r_k - \frac{\epsilon}{2^{k+1}}, r_k + \frac{\epsilon}{2^{k+1}}),$ and so $m(I_k) = \frac{\epsilon}{2^k}.$  Because $Q \subset \bigcup_{k=1}^\infty I_k,$ \[m(Q) \leq \sum_{k=1}^\infty m(I_k) = \sum_{k=1}^\infty \frac{\epsilon}{2^k} = \epsilon.\]  That is, $Q$ is measure zero: \[m(Q) = 0.\]  Nevertheless, $m\Big((0, 1)\Big) = 1,$ and thus \[m\Big((0, 1) \backslash Q\Big) = 1.\]  In other words, when we are measuring "length", the length of rational numbers within $(0, 1)$ is zero, and the length of irrational numbers is one.
