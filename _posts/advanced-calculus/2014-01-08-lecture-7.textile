@@ -26,3 +26,16 @@ _Property._ Cantor set is uncountable; actually, Cantor set can be mapped 1-to-1
 Idea: Use Ternary representation.  Cantor set recursively breaks a closed interval into three parts; we may use $0$ for the left sub-interval, and $2$ for the right sub-interval.  Then for all $x$ of Cantor set, the ternary representation of $x$ is $0.\beta_1\beta_2\beta_3\dots$ where $\beta_i$ is $0$ or $2.$  We can easily map every $x$ to an unique $y \in [0, 1].$  The binary representation of $y$ is $0.\alpha_1\alpha_2\alpha_3\dots$ where $\alpha_i$ is $0$ or $1.$  The mapping from Cantor set to $[0, 1]$ is: If $\beta_i = 0,$ then $\alpha_i = 0,$ and if $\beta_i = 1,$ then $\alpha_i = 1.$
 
 So Cantor set is measure zero, but its cardinality is the same with $\mathbb{R}.$  We had dug out so many numbers, but it was still not enough.
+
+From the discrete "infinite" $\mathbb{N}$ to the continuous "infinite" $\mathbb{R},$ is there a sequence of transitional "infinites" in between?  If we loosen up ourselves and view continuous as completeness, the question can be rephrased as: Is there a transition from incompleteness to completeness?
+
+Kurt Gödel showed that Continuum Hypothesis cannot be disproved from the set theory axioms (Gödel (1940)).  Paul Cohen showed that it cannot be proved from the set theory axioms either (Cohen (1963) & Cohen (1964)).
+
+There are sets "bigger" than $\mathbb{R}.$
+
+_Property._ Let $S = \{ f\:|\:f: [0, 1] \mapsto \mathbb{R} \}.$  Then ${\small\#}S > {\small\#}[0, 1].$
+
+_Proof._
+Suppose ${\small\#}S = {\small\#}[0, 1].$  There is a 1-to-1, onto function $\phi(t) = f_t$ for all $t \in [0, 1].$  Let $g(x) = \Big(\phi(x)\Big)(x) + 1 = f_x(x) + 1.$  Since $g \in S,$ let $a \in [0, 1]$ denote $\phi(a) = g.$  Then $g(a) - 1 = \Big(\phi(a)\Big)(a) - 1 = g(a)$ constitutes a contradiction.
+
+Power sets are bigger: ${\small\#}X \lneqq {\small\#}2^X.$
