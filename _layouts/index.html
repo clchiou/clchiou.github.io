@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="blog-title">
+  <h1 class="blog-title">{{ page.title }}</h1>
+  <p class="blog-title">{{ page.summary }}</p>
+</div>
+<nav>
+<ul class="navigator">
+  <li class="navigator"><a href="/">TOP</a></li>
+{% for category in site.categories %}
+  <li class="navigator"><a href="/{{ category | first }}/">{{ category | first | replace: '-', ' ' | upcase }}</a></li>
+{% endfor %}
+</ul>
+</nav>
+{{ content }}
