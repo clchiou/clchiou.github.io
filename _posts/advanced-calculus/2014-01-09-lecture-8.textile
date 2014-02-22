@@ -1,0 +1,45 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 8
+---
+
+h3. Axioms of Set Theory
+
+Reference: Halmos, "Naive Set Theory":http://en.wikipedia.org/wiki/Naive_Set_Theory_(book).
+
+<notextile>
+<p>Undefined terms:
+<ul class="compact">
+<li>Set</li>
+<li>Element</li>
+<li>Belong</li>
+</ul>
+</p>
+</notextile>
+
+- _Axiom of Extension._ := $A = B$ if they have the same elements.
+- _Axiom of Specification._ := For every set $A$ and conditions $S(x),$ $\exists B$ such that elements of $B$ are those of $A$ for which $S(x)$ holds.
+- _Axiom of Power._ := For every set $A,$ the power set $2^A$ exists.
+- _Axiom of Pairing._ := $\exists C = \{ A, B \}$ for every $A, B.$
+- _Axiom of Union._ := Given sets $A_\lambda$ where $\lambda \in \Lambda, \exists S$ such that $x \in S \Leftrightarrow x \in A_\lambda\:\text{for some}\:\lambda \in \Lambda.$
+- _Axiom of Choice._ := Given $A_\lambda \ne \emptyset$ where $\lambda \in \Lambda,$ $\exists A = \prod_{\lambda\in\Lambda} A_\lambda \ne \emptyset.$
+
+<notextile>
+<p>Remark:
+<ul class="compact">
+<li>Axiom of Extension defines the equality relation among sets.</li>
+<li>Axiom of Specification through Axiom of Choice guarantee that set operations are well-defined.</li>
+</ul>
+</p>
+</notextile>
+
+_Example._ Does this set exist: $\{ f\:|\:f: [0, 1] \mapsto \mathbb{R} \}$?
+Yes.  We may construct it by Axiom of Choice.  Let $\Lambda = [0, 1]$ and $A_\lambda = \mathbb{R}.$  Then <notextile>$\prod_{\lambda\in\Lambda} A_\lambda = \{ (a_\lambda)_{\lambda\in\Lambda} \:|\: a_\lambda \in A_\lambda \}$</notextile> is the set of all functions defined on $[0, 1].$
+
+Here is a logical question though: Is there a _Universal Set_?
+
+Russell: No.
+
+_Proof._ (Russell's paradox.)
+Suppose there is a Universal Set $U.$  Let $A = \{ x \in U \:|\: x \notin x \}.$  Set $A$ exists due to Axiom of Specification.  Then $A \in A \Leftrightarrow A \notin A.$
