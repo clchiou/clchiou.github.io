@@ -1,0 +1,59 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 9
+---
+
+h3. Limits of Functions
+
+*My original notes of the lemma below were incomplete; I reconstructed this part with my best effort, kept it as a record.  Please read it with a grain of salts.*
+
+_Lemma._ Given $A \supset B \supset C,$ if $A \sim C,$ then $A \sim B.$
+
+Note: $A, B, C$ are bounded, monotonically increasing rational sequences, and $A \sim C$ denotes that $A$ and $C$ converge to the same real number.
+
+_Proof._
+Let $A_0 = A, A_1 = B, A_2 = C.$
+$\varphi: A \mapsto C$ 1-1, onto.
+Let $A_3 = \varphi(A_1).$
+$\because A_1 \supset A_2 \supset A_3 = \varphi(A_1), A_1 \sim A_3.$
+$\therefore A_4 = \varphi(A_2) \subset A_3, A_2 \sim A_4.$
+That is, $A_2 \supset A_3 \supset A_4, A_2 \sim A_4.$
+<notextile>$\begin{array}{ll}\text{So}
+& A_0 \supset A_1 \supset A_2 \supset A_3 \supset A_4 \cdots \\
+& A_0 \sim A_2 \sim A_4 \sim A_6 \cdots \\
+& A_1 \sim A_3 \sim A_5 \sim A_7 \cdots \\
+\end{array}$</notextile>
+Let $D = \bigcap_{i=1}^\infty A_i$ -- the core of the onion.
+$\varphi: D \mapsto D$ 1-1, onto.
+<notextile>$\begin{array}{ll}\text{Then}
+& A = (A_0 \backslash A_1) \cup (A_1 \backslash A_2) \cup (A_2 \backslash A_3) \cup \cdots \cup D \\
+& B = A_1 = (A_1 \backslash A_2) \cup (A_2 \backslash A_3) \cup (A_3 \backslash A_4) \cup \cdots \cup D \\
+\end{array}$</notextile>
+<notextile>$\begin{array}{lrcl}
+\because
+& A_n & \sim & A_{n+2} \\
+\therefore
+& A_0 \backslash A_1 & \sim & A_2 \backslash A_3 \\
+& A_2 \backslash A_3 & \sim & A_4 \backslash A_5 \\
+& \vdots & & \vdots \\
+& D & \sim & D \\
+\therefore
+& A & \sim & B \\
+\end{array}$</notextile>
+
+_Definition._
+$\lim_{x \rightarrow a} f(x) = l$ if $\forall \epsilon > 0, \exists \delta$ such that \[0 \lneqq |x-a| < \delta \Rightarrow |f(x)-l|<\epsilon\] is true.
+
+_Example._ $\lim_{x \rightarrow 2} x^2 = 4.$
+Note: $|x^2-4| = |x+2||x-2|.$
+Let $\delta_1 = 1,$ that is, $1 < x < 3.$  Then $|x^2-4|<5|x-2|.$
+Let $\delta_2 = \frac{\epsilon}{5}.$
+Pick $\delta = \min \{ \delta_1, \delta_2 \}.$
+
+_Example._ $\lim_{x \rightarrow 1} \frac{x}{x^2+1} = \frac{1}{2}.$
+Note: \[\left| \frac{x}{x^2+1} - \frac{1}{2} \right| = \left| \frac{(x-1)^2}{2(x^2+1)} \right|.\]  Let $\delta' = 1,$ that is, $x \in (0, 2).$  Then \[\left| \frac{(x-1)^2}{2(x^2+1)} \right| < \frac{1}{2}|x-1|^2.\]  Pick $\delta = \min \{ \delta', \sqrt{2\epsilon} \}.$  Then \[\left| \frac{x}{x^2+1} - \frac{1}{2} \right| < \frac{1}{2}(x-1)^2 < \epsilon.\]
+
+_Example._ $\lim_{x \rightarrow 2} \frac{1-2x}{(x-1)(x-3)} = 3.$
+Note: \[\left| \frac{1-2x}{(x-1)(x-3)} - 3 \right| = \left| \frac{(3x-4)(x-2)}{(x-1)(x-3)} \right|.\]  Let $\delta' \ll 1,$ i.e., $x \approx 2.$  Then \[\left| \frac{(3x-4)(x-2)}{x^2-4x+3} \right| < 5|x-2|\] where $5$ is picked arbitrarily.
+Pick $\delta = \min \{ \delta', \frac{\epsilon}{5} \}.$  Then \[\left| \frac{1-2x}{(x-1)(x-3)} - 3 \right| < 5|x-2| < 5\delta \leq 5 \cdot \frac{\epsilon}{5}.\]
