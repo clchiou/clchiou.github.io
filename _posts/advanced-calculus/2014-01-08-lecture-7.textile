@@ -19,9 +19,9 @@ _Property._ Cantor set is measure zero.  \[\begin{array}{cl}
 
 _Property._ $[0, 1]$ is uncountable.
 
-Idea: Use Nested Interval Theorem.  Suppose $[0, 1]$ is countable.  Let $\{ x_n \} = [0, 1]$ and split it into three sub-intervals: $[0, \frac{1}{3}],$ $[\frac{1}{3}, \frac{2}{3}],$ and $[\frac{2}{3}, 1].$  Then $x_1$ must not belong to one of the sub-intervals, call it $I_1.$  Split $I_1$ into three sub-intervals.  Then $x_2$ must not belong to one of the sub-intervals, call it $I_2.$  Continue this process and we will have $I_1 \supset I_2 \supset \cdots,$ and $|I_n| = \frac{1}{3^n} \rightarrow 0.$  By Nested Interval Theorem, there is a real number $x \in [0, 1]$ such that $\bigcup_{n=1}^\infty I_n = \{ x \}.$  However, for all $n,$ we have $x \in I_n$ and so $x \neq x_n.$  Thus, $[0, 1] \neq \{ x_n \},$ which contradicts to our assumption above.
+Idea: Use Nested Interval Theorem.  Suppose $[0, 1]$ is countable.  Let $\{ x_n \} = [0, 1]$ and split it into three sub-intervals: $[0, \frac{1}{3}],$ $[\frac{1}{3}, \frac{2}{3}],$ and $[\frac{2}{3}, 1].$  Then $x_1$ must not belong to one of the sub-intervals, call it $I_1.$  Split $I_1$ into three sub-intervals.  Then $x_2$ must not belong to one of the sub-intervals, call it $I_2.$  Continue this process and we will have $I_1 \supset I_2 \supset \cdots,$ and $|I_n| = \frac{1}{3^n} \to 0.$  By Nested Interval Theorem, there is a real number $x \in [0, 1]$ such that $\bigcup_{n=1}^\infty I_n = \{ x \}.$  However, for all $n,$ we have $x \in I_n$ and so $x \neq x_n.$  Thus, $[0, 1] \neq \{ x_n \},$ which contradicts to our assumption above.
 
-_Property._ Cantor set is uncountable; actually, Cantor set can be mapped 1-to-1 and onto to $[0, 1].$
+_Property._ Cantor set is uncountable; actually, Cantor set can be mapped 1-1 and onto to $[0, 1].$
 
 Idea: Use Ternary representation.  Cantor set recursively breaks a closed interval into three parts; we may use $0$ for the left sub-interval, and $2$ for the right sub-interval.  Then for all $x$ of Cantor set, the ternary representation of $x$ is $0.\beta_1\beta_2\beta_3\dots$ where $\beta_i$ is $0$ or $2.$  We can easily map every $x$ to an unique $y \in [0, 1].$  The binary representation of $y$ is $0.\alpha_1\alpha_2\alpha_3\dots$ where $\alpha_i$ is $0$ or $1.$  The mapping from Cantor set to $[0, 1]$ is: If $\beta_i = 0,$ then $\alpha_i = 0,$ and if $\beta_i = 1,$ then $\alpha_i = 1.$
 
@@ -36,6 +36,6 @@ There are sets "bigger" than $\mathbb{R}.$
 _Property._ Let $S = \{ f\:|\:f: [0, 1] \mapsto \mathbb{R} \}.$  Then ${\small\#}S > {\small\#}[0, 1].$
 
 _Proof._
-Suppose ${\small\#}S = {\small\#}[0, 1].$  There is a 1-to-1, onto function $\phi(t) = f_t$ for all $t \in [0, 1].$  Let $g(x) = \Big(\phi(x)\Big)(x) + 1 = f_x(x) + 1.$  Since $g \in S,$ let $a \in [0, 1]$ denote $\phi(a) = g.$  Then $g(a) - 1 = \Big(\phi(a)\Big)(a) - 1 = g(a)$ constitutes a contradiction.
+Suppose ${\small\#}S = {\small\#}[0, 1].$  There is a 1-1, onto function $\phi(t) = f_t$ for all $t \in [0, 1].$  Let $g(x) = \Big(\phi(x)\Big)(x) + 1 = f_x(x) + 1.$  Since $g \in S,$ let $a \in [0, 1]$ denote $\phi(a) = g.$  Then $g(a) - 1 = \Big(\phi(a)\Big)(a) - 1 = g(a)$ constitutes a contradiction.
 
 Power sets are bigger: ${\small\#}X \lneqq {\small\#}2^X.$

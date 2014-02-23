@@ -31,8 +31,8 @@ _Proof._
 (Diagonal argument.)
 
 _Definition._ Given two sets $A$ and $B,$
-* ${\small\#}A \leq {\small\#}B$ if $\exists f: A \mapsto B$ where $f$ is 1-to-1, and
-* ${\small\#}A = {\small\#}B$ if $\exists f: A \mapsto B$ where $f$ is 1-to-1 and onto.
+* ${\small\#}A \leq {\small\#}B$ if $\exists f: A \mapsto B$ where $f$ is 1-1, and
+* ${\small\#}A = {\small\#}B$ if $\exists f: A \mapsto B$ where $f$ is 1-1 and onto.
 
 _Theorem._ If $A \stackrel{\small{\text{1-1}}}{\mapsto} B$ and $B \stackrel{\small{\text{1-1}}}{\mapsto} A,$ then ${\small\#}A = {\small\#}B.$
 

@@ -38,7 +38,7 @@ _Proof._
 <li>$\{ a_n \} \uparrow$ and $\forall n, a_n \lt b_1 \Rightarrow \exists \alpha = \lim a_n$</li>
 <li>$\{ b_n \} \downarrow$ and $\forall n, b_n \gt a_1 \Rightarrow \exists \beta = \lim b_n$</li>
 <li>(We used the sequence version of completeness here.)</li>
-<li>$a_n \leq \alpha, \beta \leq b_n \Rightarrow 0 \leq \beta - \alpha \leq b_n - a_n \rightarrow 0$</li>
+<li>$a_n \leq \alpha, \beta \leq b_n \Rightarrow 0 \leq \beta - \alpha \leq b_n - a_n \to 0$</li>
 <li>$\therefore \alpha = \beta$</li>
 <li>Let $x_0 = \alpha = \beta, \bigcap_{n=1}^\infty I_n = \{ x_0 \}$</li>
 </ul>
@@ -90,12 +90,12 @@ _Proof._
     <li>Let $\{ x_n \} \subset [a, b] = I$</li>
     <li>Split $I$ into two equal parts, and one part must have infinitely many elements</li>
     <li>Pick that part as $I_1 = [a_1, b_1]$</li>
-    <li><notextile>$|I_n| = b_n - a_n = \frac{b_{n-1} - a_{n-1}}{2} = \cdots = \frac{b-a}{2^n} \rightarrow 0$</notextile></li>
+    <li><notextile>$|I_n| = b_n - a_n = \frac{b_{n-1} - a_{n-1}}{2} = \cdots = \frac{b-a}{2^n} \to 0$</notextile></li>
     <li>$a_n \uparrow, a_n \leq b \Rightarrow \exists \alpha = \lim a_n$</li>
     <li>$b_n \downarrow, b_n \geq a \Rightarrow \exists \beta = \lim b_n$</li>
     <li>$\therefore \alpha = \beta$</li>
     <li>Let $x_0 = \alpha = \beta$</li>
-    <li>Pick any $x_{n_k} \in I_k, a_k \leq x_{n_k} \leq b_k \Rightarrow \lim_{k\rightarrow\infty} x_{n_k} = x_0$</li>
+    <li>Pick any $x_{n_k} \in I_k, a_k \leq x_{n_k} \leq b_k \Rightarrow \lim_{k\to\infty} x_{n_k} = x_0$</li>
     </ul>
   </li>
   </ol>
