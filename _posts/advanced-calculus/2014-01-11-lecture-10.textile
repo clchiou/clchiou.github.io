@@ -1,0 +1,73 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 10
+---
+
+h3. Squeeze Theorem
+
+_Theorem._
+If $g(x) \leq f(x) \leq h(x)$ when $0 < |x-a| < \text{some constant},$ and $\lim_{x \to a} g(x) = lim_{x \to a} h(x) = l,$ then $\lim_{x \to a} f(x) = l.$
+
+_Proof._
+For all $\epsilon > 0,$ because $\lim_{x \to a} g(x) = l$ and $lim_{x \to a} h(x) = l,$
+* $\exists \delta_1 > 0$ such that $|g(x) - l| < \epsilon$ when $0 < |x - a| < \delta_1,$ and
+* $\exists \delta_2 > 0$ such that $|h(x) - l| < \epsilon$ when $0 < |x - a| < \delta_2.$
+
+Let $\delta = \min \{ \delta_1, \delta_2 \}.$  Then when $0 < |x-a| < \delta,$ \[ -\epsilon < g(x) - l \leq f(x) - l \leq h(x) - l < \epsilon.\]  So $|f(x) - l| < \epsilon.$
+
+_Theorem._ If $b_n \leq a_n \leq c_n$ and $\lim b_n = \lim c_c = l,$ then $\lim a_n = l.$
+
+_Proof._ (Omitted.)
+
+_Example._ $\lim_{x \to 0} x\sin\frac{1}{x} = 0.$
+$\because \forall x \ne 0, 0 \leq |x\sin\frac{1}{x}| \leq |x|$
+$\therefore \lim_{x \to 0} x\sin\frac{1}{x} = 0$
+
+_Example._ Prove that $\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n$ exists.
+Note that <notextile>\[\begin{array}{rl}
+  & \left(1 + \frac{1}{n}\right)^n = \sum_{k=0}^n C_k^n n^{-k} \\
+= & 1 + n\cdot\frac{1}{n} + \frac{n(n-1)}{2!}\cdot\frac{1}{n^2} + \frac{n(n-1)(n-2)}{3!}\cdot\frac{1}{n^3} + \cdots \\
+= & 1 + 1 + \frac{1}{2!}\left(1-\frac{1}{n}\right) + \frac{1}{3!}\left(1-\frac{1}{n}\right)\left(1-\frac{2}{n}\right) + \cdots \\
+  & \left(1 + \frac{1}{n+1}\right)^{n+1} \\
+= & 1 + 1 + \frac{1}{2!}\left(1-\frac{1}{n+1}\right) + \frac{1}{3!}\left(1-\frac{1}{n+1}\right)\left(1-\frac{2}{n+2}\right) + \cdots \\
+\end{array}\]</notextile> So $\left(1 + \frac{1}{n}\right)^n < \left(1 + \frac{1}{n+1}\right)^{n+1}$ -- (1).
+And <notextile>\[\begin{array}{rcl}
+\left(1 + \frac{1}{n}\right)^n
+& < & 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots + \frac{1}{n!} \\
+& < & 1 + 1 + \frac{1}{2} + \frac{1}{2^2} + \cdots + \frac{1}{2^n} \\
+& < & 3. \\
+\end{array}\]</notextile> So $\left(1 + \frac{1}{n}\right)^n$ bounded -- (2).
+From (1) and (2), $\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n$ exists.
+
+You may use the inequality of arithmetic and geometric means to derive that $\left(1 + \frac{1}{n}\right)^n$ is increasing.
+
+Consider $1$ and $(1+1/n)$ repeated $n$-times: <notextile>\[\begin{array}{rcl}
+\sqrt[n+1]{\left(1+\frac{1}{n}\right)^n}
+& < & \frac{1+(1+1/n)+(1+1/n)+\cdots+(1+1/n)}{n+1} \\
+& = & \frac{1+n(1+1/n)}{n+1} \\
+& = & 1 + \frac{1}{n+1}. \\
+\end{array}\]</notextile> So $\left(1+\frac{1}{n}\right)^n < \left(1+\frac{1}{n+1}\right)^{n+1}.$
+
+And $\left(1 + \frac{1}{n}\right)^{n+1}$ is decreasing by considering $1$ and $\frac{1}{1+1/n}$ repeated $n+1$-times.
+
+_Example._ $\lim_{n\to\infty} \sqrt[n]{n} = 1.$
+For all $n > 1, \sqrt[n]{n} > 1.$
+Let $\sqrt[n]{n} = 1 + \epsilon_n.$  Then <notextile>\[\begin{array}{rcl}
+n & = & (1 + \epsilon_n)^n \\
+& = & 1 + n\epsilon_n + \frac{n(n-1)}{2!}\epsilon_n^2 + \cdots \\
+\end{array}\]</notextile>  So $n > \frac{n(n-1)}{2!}\epsilon_n^2,$ i.e., $0 < \epsilon_n^2 < \frac{2}{n-1}.$
+Since $\lim_{n\to\infty} \frac{2}{n-1} = 0,$ $\epsilon_n^2 \to 0$ and so $\epsilon_n \to 0.$
+
+_Example._ $\lim_{n\to\infty} \frac{(n!)^2}{n^n} = \infty.$
+Note that <notextile>\[\begin{array}{rcccccccc}
+n! & = & 1 & \cdot & 2 & \cdots & (n-1) & \cdot & n \\
+n! & = & n & \cdot & (n-1) & \cdots & 2 & \cdot & 1 \\
+\end{array}\]</notextile>  Thus $(n!)^2 \geq n \cdot [2(n-1)]^{n-2} \cdot n.$
+Then <notextile>\[\begin{array}{rcl}
+\frac{(n!)^2}{n^n}
+& \geq & \frac{2^{n-2}(n-1)^{n-2}}{n^{n-2}} \\
+& = & 2^{n-2}(1-1/n)^{n-2} \\
+& = & 2^{n-2} \frac{(1-1/n)^n}{(1-1/n)^2} \\
+& = & \infty \cdot \frac{e}{1}. \\
+\end{array}\]</notextile>
