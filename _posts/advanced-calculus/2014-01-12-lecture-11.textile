@@ -1,0 +1,46 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 11
+---
+
+h3. Topology of $\mathbb{R}$
+
+Topology is about neighbors; i.e., does an operation preserve the neighborhood?  Because a total ordering in $\mathbb{R}$ is established, there is the notion of _neighbors._
+
+_Definition._
+We call $(a, b) = \{ x\:|\:a < x < b \}$ an open interval.  Given $A \subset \mathbb{R},$ $A$ is an _open set_ if $\forall x \in A, \exists (a, b)\:\text{s.t.}\:x \in (a, b) \subset A.$
+
+Note: Open interval is the basis of the openness of sets.
+
+_Definition._
+Given $A \subset \mathbb{R}$ and $x \in A,$ any open set $V$ such that $x \in V \subset A$ is a _neighborhood_ of $x$ in $A.$
+
+_Definition._
+Given $A \subset \mathbb{R},$ $A$ is _closed_ if $\bar{A}$ is open.
+
+_Example._ $A = \{ \frac{1}{n}\:|\:n \in \mathbb{N} \}$ is neither open nor closed.
+$\bar{A} = (-\infty, 0] \cup \left(\bigcup_{n=1}^\infty (\frac{1}{n+1}, \frac{1}{n}) \right) \cup (1, \infty).$
+$0 \in \bar{A}$ but $\nexists (a, b)$ s.t. $x \in (a, b) \subset \bar{A}.$
+
+_Example._ But $0 \cup A$ is closed.
+
+_Example._ Cantor Set is closed.
+
+_Property._ Union of open sets is open.
+
+_Proof._ (Omitted)
+
+_Property._ Finite intersection of open sets is open.
+
+_Proof._
+$A = \bigcap_{i=1}^n J_i,$ where $J_i$ is open.
+$x \in A \Rightarrow x \in J_i\:\text{for all}\:i \Rightarrow \exists (a_i, b_i)\:\text{s.t.}\:x\in(a_i, b_i)\subset J_i\:\text{for all}\:i.$
+Let $a = \max\{a_i\},$ and $b = \min\{b_i\}.$
+Then $x \in (a, b) \subseteq (a_i, b_i) \subset J_i$ for all $i.$
+
+Remark: Any intersection of open sets is not necessarily open; e.g., $\bigcap_{n=1}^\infty (\frac{-1}{n}, \frac{1}{n}) = \{ 0 \}$ is not open.
+
+_Property._ Intersection of closed sets is closed.
+
+_Property._ Finite union of closed sets is closed.
