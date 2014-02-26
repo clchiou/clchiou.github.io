@@ -23,7 +23,7 @@ _Example._ $A = \{ \frac{1}{n}\:|\:n \in \mathbb{N} \}$ is neither open nor clos
 $\bar{A} = (-\infty, 0] \cup \left(\bigcup_{n=1}^\infty (\frac{1}{n+1}, \frac{1}{n}) \right) \cup (1, \infty).$
 $0 \in \bar{A}$ but $\nexists (a, b)$ s.t. $x \in (a, b) \subset \bar{A}.$
 
-_Example._ But $0 \cup A$ is closed.
+_Example._ But $\{ 0 \} \cup A$ is closed.
 
 _Example._ Cantor Set is closed.
 
