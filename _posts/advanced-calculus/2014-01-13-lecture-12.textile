@@ -1,0 +1,43 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 12
+---
+
+h3. Mean Value Theorem
+
+_Definition._ $f$ is _continuous at_ $a$ if $\lim_{x \to a} f(x) = f(a).$
+
+_Theorem._ Mean Value Theorem.
+If $f$ is continuous on $[a, b]$ and $f(a)f(b) < 0,$ then <notextile>$\exists c \in (a, b)$ s.t. $f(c) = 0.$</notextile>
+
+_Proof._
+(Idea: Bisection method.)
+Without loss of generality, assume $f(a) < 0$ and $f(b) > 0.$
+Let $\alpha = \frac{a+b}{2}.$  There are three possibilities:
+# $f(\alpha) = 0,$ then $c = \alpha.$
+# $f(\alpha) > 0,$ pick $a_1 = a$ and $b_1 = \alpha.$
+# $f(\alpha) < 0,$ pick $a_1 = \alpha$ and $b_1 = b.$
+
+Let $I_n = [a_n, b_n], |I_n| = \frac{b-a}{2^n}.$
+Then either $\exists n$ s.t. $f(\alpha_n) = 0$ and $c = \alpha_n,$ or
+$\exists$ nested intervals $I_1, I_2, \dotsc$ such that
+* $I_n \subset I_{n+1}.$
+* $|I_n| \to 0.$
+* $f(a_n) < 0, f(b_n) > 0.$
+
+By Nested Interval Theorem (which is basically the completeness of $\mathbb{R}$ in disguise), $\exists! c \in [a, b]$ s.t. $\bigcap_{n=1}^\infty = \{ c \}$ where $a_n \to c$ and $b_n \to c.$
+Since $f$ is continuous at $c,$
+<notextile>$f(c) = \lim_{n\to\infty} f(a_n) \leq 0$</notextile> and <notextile>$f(c) = \lim_{n\to\infty} f(b_n) \geq 0$</notextile>.
+So <notextile>$f(c) = 0.$</notextile>
+
+_Example._ (Special case of Fixed Pointed Theorem in $\mathbb{R}.$)
+If $f$ is continuous on $[a, b]$ and $\{ f(x)\:|\:x\in [a, b] \} \subseteq [a, b],$ then $\exists x_0 \in [a, b]$ s.t. $f(x_0) = x_0.$
+
+_Proof._
+* If $f(a) = a$ or $f(b) = b,$ then the theorem is true.
+* If $f(a) > a$ and $f(b) < b,$ (this includes the possibility of $f(a) = f(b)$ by the way) then consider $g(x) = f(x) - x.$  Since $g(a) > 0$ and $g(b) < 0,$ by Mean Value Theorem, $\exists c$ s.t. <notextile>$g(c) = f(c) - c = 0.$</notextile>
+* If $f(a) < a$ and $f(b) > b,$ then the same argument applies.
+* If $f(a) > a$ and $f(b) > b,$ this case is a little bit trickier.  We have to construct a line $y = \alpha x + \beta$ such that $(a, f(a))$ is below the line but $(b, f(b))$ is above the line.
+
+This can be extended to $\mathbb{R}^n$: Given an unit ball $B = \{ \vec{x}\:|\: |\vec{x}| \leq 1 \},$ if $f: B \mapsto B$ is continuous, then $\exists \vec{x_0} \in B$ s.t. $f(\vec{x_0}) = \vec{x_0}.$  This is a special case of Brouwer Fixed Pointed Theorem, which can be extended to simply-connected spaces.
