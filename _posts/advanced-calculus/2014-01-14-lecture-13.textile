@@ -1,0 +1,50 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 13
+---
+
+h3. Extreme Value Theory
+
+Given $S \subset \mathbb{R},$ and $f : S \mapsto \mathbb{R},$ we call $\overline{x}$ a maximum point of $S$ if \[f(\overline{x}) \geq f(x)\:\text{for all}\:x \in S,\]  And $\underline{x}$ a minimum point of $S$ if \[f(\underline{x}) \leq f(x)\:\text{for all}\:x \in S.\]
+
+_Lemma._ If $f$ is continuous in $[a, b],$ then $f$ is bounded.
+
+_Proof._
+Suppose, without loss of generality, $f$ is not bounded above.
+Then $\forall n, \exists x_n \in [a, b]$ s.t. $f(x_n) > n.$
+Since $\{ x_n \}$ is a point sequence in $[a, b],$ by Bolzano-Weierstrass Theorem,
+$\exists \{ x_{n_k} \} \subseteq \{ x_n \}$ s.t. $\lim_{k\to\infty} x_{n_k} = x_0 \in \mathbb{R}.$
+Note that $x_0 \in [a, b]$ because $[a, b]$ is closed and $x_{n_k} \in [a, b].$
+So $f$ is continuous at $x_0.$
+Then $\lim_{k\to\infty} f(x_{n_k}) = f(x_0) > n,$ i.e., $f(x_0) = \infty,$ which is a contradiction.
+
+_Theorem._ Extreme Value Theory.
+$\exists \overline{x}, \underline{x} \in [a, b]$ s.t. $f(\underline{x}) \leq f(x) \leq f(\overline{x}).$
+
+_Proof._
+By lemma above, $f$ is bounded, i.e., $\sup_{x\in [a, b]} f$ and $\inf_{x\in [a, b]} f$ exists.
+Claim: $\exists x_0 \in [a, b]$ s.t. $f(x_0) = \sup f = M.$
+For all $n,$ $\exists x_n \in [a, b]$ s.t. $f(x_n) > M - \frac{1}{n}.$
+Since $\{ x_n \} \subset [a, b],$ by Bolzano-Weierstrass Theorem,
+$\exists \{ x_{n_k} \} \subseteq \{ x_n \}$ s.t. $\lim_{k\to\infty} x_{n_k} = x_0 \in [a, b].$
+Then \[f(x_0) = \lim_{k\to\infty} f(x_{n_k}) \geq \lim_{k\to\infty} \left(M - \frac{1}{n_k}\right) = M.\]  So $f(x_0) = M.$
+
+_Theorem._
+At local maximum/minimum point, the first derivative of $f$ equals $0.$
+
+_Proof._
+At local minimum point $x_0,$ $\exists \delta > 0$ s.t. $f(x) \geq f(x_0)$ for all $x \in (x_0 - \delta, x_0 + \delta).$  Then <notextile>\[\begin{array}{rclcl}
+f'(x_0) & = & \lim_{x\to x^+} \frac{f(x) - f(x_0)}{x - x_0} & \geq & 0,\:\text{and} \\
+f'(x_0) & = & \lim_{x\to x^-} \frac{f(x) - f(x_0)}{x - x_0} & \leq & 0. \\
+\end{array}\]</notextile>  Thus $f'(x_0) = 0.$
+
+_Theorem._ Rolle's Theorem.
+If $f$ is continuous in $[a, b]$ and $f(a) = f(b),$ then $\exists c \in [a, b]$ s.t. <notextile>$f'(c) = 0.$</notextile>
+
+_Proof._
+By Extreme Value Theorem, the maximum $M$ and minimum $m$ exist.
+* $\{ f(a), f(b) \} = \{ M, m \}$:
+  Then $f(a) = f(b) = M = m$ and $f(x)$ is constant; so $f'(x) = 0.$
+* $\{ f(a), f(b) \} \ne \{ M, m \}$:
+  $\exists \overline{x} \in (a, b)$ s.t. $f(\overline{x}) = M$; thus $f'(\overline{x}) = 0.$ (Note that $\overline{x} \ne a, b$ here.)
