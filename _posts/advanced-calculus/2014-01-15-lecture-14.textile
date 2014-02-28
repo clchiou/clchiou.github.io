@@ -1,0 +1,30 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 14
+---
+
+h3. Mean Value Theorems
+
+_Theorem._ Mean Value Theorem.
+If $f$ is continuous in $[a, b]$ and differentiable in $(a, b),$ then $\exists c \in (a, b)$ such that <notextile>$\frac{f(b) - f(a)}{b - a} = f'(c) = m_{AB}.$</notextile>
+
+_Proof._
+(Idea: While Rolle's Theorem is a special case of Mean Value Theorem, Mean Value Theorem can be reduced to Rolle's Theorem.)
+Let $g(x) = f(x) - m_{AB}(x - a).$
+Then $g(x) = f(a)$ and $g(b) = f(b) - m_{AB}(b - a) = f(a).$
+So $\exists c \in (a, b)$ s.t. <notextile>$g'(c) = 0.$</notextile>
+
+_Theorem._ Intermediate Value Theorem.
+If $f$ is continuous in $[a, b],$ then $\forall f(a) < y < f(b),$ $\exists x \in (a, b)\:\text{s.t.}\: f(x) = y.$  (Without loss of generality, assume $f(a) < f(b).$)
+
+_Proof._ (Omitted.)
+
+_Theorem._ Mean Value Theorem for Integration.
+If $f$ is continuous in $[a, b]$ (note: thus $\int_a^b f(x)\,\mathrm{d}x$ exists), then $\exists c \in (a, b)$ such that <notextile>$f(c)(b-a) = \int_a^b f(x)\,\mathrm{d}x.$</notextile>
+
+_Proof._
+Let $\lambda = \frac{\int_a^b f(x)\,\mathrm{d}x}{b - a}.$
+Because $f(\underline{x}) \leq f(x) \leq f(\overline{x}),$
+\[f(\underline{x})(b-a) = \int_a^b f(\underline{x})\,\mathrm{d}x \leq \int_a^b f(x)\,\mathrm{d}x \leq \int_a^b f(\overline{x})\,\mathrm{d}x = f(\overline{x})(b-a).\]  So $f(\underline{x}) \leq \lambda = \frac{\int_a^b f(x)\,\mathrm{d}x}{b - a} \leq f(\overline{x}).$
+By Intermediate Value Theorem, $\exists x \in (\underline{x}, \overline{x}) \subseteq (a, b)$ s.t. $f(x) = \lambda.$
