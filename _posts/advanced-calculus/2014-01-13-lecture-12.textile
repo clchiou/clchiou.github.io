@@ -4,11 +4,11 @@ category: advanced-calculus
 title: Lecture 12
 ---
 
-h3. Mean Value Theorem
+h3. "Mid-Value" Theorem
 
 _Definition._ $f$ is _continuous at_ $a$ if $\lim_{x \to a} f(x) = f(a).$
 
-_Theorem._ Mean Value Theorem.
+_Theorem._ "Mid-Value" Theorem.
 If $f$ is continuous on $[a, b]$ and $f(a)f(b) < 0,$ then <notextile>$\exists c \in (a, b)$ s.t. $f(c) = 0.$</notextile>
 
 _Proof._
