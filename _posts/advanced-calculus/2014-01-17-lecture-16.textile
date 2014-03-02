@@ -1,0 +1,34 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 16
+---
+
+h3. Preliminary to Heine-Borel Theorem and Uniformly Continuous
+
+Recall: A function $f$ is continuous in $A$ if \[\forall x \in A\:\text{and}\:\epsilon > 0, \exists \delta > 0\:\text{s.t.}\: |f(y) - f(x)| < \epsilon\:\text{whenever}\: |y-x| < \delta.\]  Here $\delta$ depends on both $x$ and $\epsilon.$
+
+_Definition._ A function $f$ is _uniformly continuous_ in $A$ if \[\forall \epsilon > 0, \exists \delta > 0\:\text{s.t.}\: \forall x \in A, |f(y) - f(x)| < \epsilon\:\text{whenever}\: |y-x| < \delta.\]
+
+Note: $\delta$ depends on $\epsilon$ only and is independent of $x.$
+
+_Theorem._ If $f$ is continuous in $[a, b],$ then $f$ is uniformly continuous in $[a, b].$
+
+Here is our grand plan:
+* Nested Interval Theorem.
+* $\Rightarrow$ Heine-Borel Theorem (any open cover reduces to a finite sub-cover; cf. compactness).
+* $\Rightarrow$ If $f$ is continuous, then $f$ uniformly continuous.
+* $\Rightarrow$ If $f$ continuous in $[a, b],$ then Rizmann summable in $[a, b].$
+
+_Theorem._ Heine-Borel Theorem.
+If $\mathcal{F}$ is a family of open sets covering $[a, b]$ ($\forall x \in [a, b], \exists V \in \mathcal{F}$ s.t. $x \in V$), then there are finitely many open sets $V_1, V_2, \dotsc, V_n \in \mathcal{F}$ s.t. $[a, b] \subset \bigcup_{i=1}^n V_i.$
+
+To prove Heine-Borel Theorem, we have to go back to the topology of $\mathbb{R}.$
+
+_Definition._ Given $A \subset \mathbb{R},$ $x$ is an _accumulation point_ of $A$ if all neighborhoods of $x$ contain infinitely many points of $A$ (or contain at least one point of $A$ that is not $x,$ or $\forall \delta > 0, (x - \delta, x + \delta) \cup A$ is infinite).
+
+_Definition._ A _derived set_ $A'$ of $A$ is the set of accumulation points of $A.$
+
+_Definition._ A point $x \in A$ is an _isolation point_ of $A$ if $x \notin A'.$
+
+_Example._ $A = (0, 1),$ then $A' = [0, 1].$
