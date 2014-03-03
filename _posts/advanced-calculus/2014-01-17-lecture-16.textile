@@ -25,7 +25,7 @@ If $\mathcal{F}$ is a family of open sets covering $[a, b]$ ($\forall x \in [a, 
 
 To prove Heine-Borel Theorem, we have to go back to the topology of $\mathbb{R}.$
 
-_Definition._ Given $A \subset \mathbb{R},$ $x$ is an _accumulation point_ of $A$ if all neighborhoods of $x$ contain infinitely many points of $A$ (or contain at least one point of $A$ that is not $x,$ or $\forall \delta > 0, (x - \delta, x + \delta) \cup A$ is infinite).
+_Definition._ Given $A \subset \mathbb{R},$ $x$ is an _accumulation point_ (or a _limit point_) of $A$ if all neighborhoods of $x$ contain either infinitely many points of $A,$ or at least one point of $A$ that is not $x$ (or instead of neighborhoods, we may define accumulation points with open sets: $\forall \delta > 0, (x - \delta, x + \delta) \cap A$ is infinite).
 
 _Definition._ A _derived set_ $A'$ of $A$ is the set of accumulation points of $A.$
 
