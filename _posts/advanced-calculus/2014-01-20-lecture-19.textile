@@ -1,0 +1,24 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 19
+---
+
+h3. Notes on Heine-Borel Threorem
+
+* An open cover is more "interesting" than a closed cover in the sense that an open cover does not contain all accumulation points and thus it is harder to cover something with an open cover.
+
+* The concept of "compact set" is derived from Heine-Borel Threorem.
+
+* The premise of Heine-Borel Threorem that $A$ is bounded closed is necessary.
+_Example._  $A = (0, 1)$ is open but bounded.  Let $\mathcal{F} = \{ (\frac{1}{n}, 1)\:|\:n=1, \dots \}.$  $\cup_{V_n \in \mathcal{F}} V_n = A,$ but there does not exists a finite sub-cover.
+_Example._  $A = \{n\:|\:n=1,\dots\}$ is closed but unbounded.  $\mathcal{F} = \{ (n-\frac{1}{n}, n+\frac{1}{n})\:|\:n=1,\dots \}$ is a counter-example.
+_Example._  $A = \mathbb{R}$ is closed, open, and unbounded.  $\mathcal{F} = \{ (-n, n)\:|\:n=1,\dots \}$ is a counter-example.
+
+* Regarding finite sub-cover:
+Given $A = [0, 1],$ let $\mathcal{F} = \{ (\frac{1}{n}, 2)\:|\:n=1,\dots \}.$  Although $\mathcal{F}$ does not cover $A,$ $\mathcal{F'} = \mathcal{F} \cup \{ (-\epsilon, \epsilon ) \}$ does, and there is a finite sub-cover of $\mathcal{F'}.$
+
+* Not all metric spaces are complete; so properties of $\mathbb{R}^n$ do not necessarily extend to all metric spaces.
+_Example._ In $\mathbb{R}^n,$ compact $\Leftrightarrow$ closed and bounded, but in metric space, compact $\Rightarrow$ closed and bounded but not vice versa ($\nLeftarrow$ due to lack of completeness).
+
+* A function $f$ is continuous in $A \subset \mathbb{R}$ if this is true: $\forall x \in A$ and $\epsilon > 0,$ $\exists \delta > 0$ as a function of $x$ and $\epsilon$ such that $|f(y) - f(x)| < \epsilon$ whenever $0 < |y - x| < \delta.$  And if the value of $\delta$ is irrelevant to $x,$ i.e., $\delta$ only depends on $\epsilon,$ then $f$ is uniformly continuous.
