@@ -24,7 +24,10 @@ p.blog-title {
 
 ul.navigator {
   list-style: none;
+  margin: auto;
+  max-width: 700px;
   padding: 0px;
+  position: relative;
 }
 
 li.navigator {
@@ -35,7 +38,7 @@ li.navigator {
 .content {
   margin: auto;
   max-width: 700px;
-  padding-top: 85px;
+  padding-top: 60px;
   position: relative;
 }
 

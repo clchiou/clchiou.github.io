@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
   </head>
   <body>
+    <nav>
+    <ul class="navigator">
+      <li class="navigator"><a href="/">TOP</a></li>
+      {% for category in site.categories %}
+      <li class="navigator"><a href="/{{ category | first }}/">{{ category | first | replace: '-', ' ' | upcase }}</a></li>
+      {% endfor %}
+    </ul>
+    </nav>
     <div class="content">
       {{ content }}
       <!-- Creative Commons License -->
