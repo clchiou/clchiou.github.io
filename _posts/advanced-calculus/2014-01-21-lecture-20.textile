@@ -1,0 +1,37 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 20
+---
+
+h3. Proof of Uniformly Continuous
+
+_Property._ If $f'$ is continuous on $(a, b)$ where $a$ or $b$ could be $\pm\infty,$ then $f$ is uniformly continuous on $[a, b].$
+
+_Proof._ <notextile>Let $|f'(x)| < M$ for all $x \in (a, b).$  By mean value theorem, $\forall x,$ \[|f(y) - f(x)| = |f'(c)(y - x)| < M|y-x| < \epsilon\] whenever $|y - x| < \frac{\epsilon}{M} = \delta,$ which is independent to $x.$</notextile>
+
+_Theorem._ Special case of Heine-Cantor Theorem.
+If $f$ is continuous on $[a, b],$ then $f$ is uniformly continuous on $[a, b].$
+
+(Note: In general, properties of $\mathbb{R}$ is not necessary true in general abstract space.)
+
+_Proof._
+For all $x \in [a, b],$ since $f$ is continuous at $x,$ given $\frac{\epsilon}{2} > 0,$ $\exists \delta(\epsilon, x)$ s.t. $|f(y) - f(x)| < \frac{\epsilon}{2}$ whenever $0 < |y-x| < \delta.$
+Let $\mathcal{F} = \{ I_{\delta/2}(x)\:|\:x \in [a, b] \}$ cover $[a, b].$  (Note: The diameter of $I$ must be smaller than $\delta,$ and with an open cover we may use Heine-Borel theorem.)
+By Heine-Borel theorem, $\exists I_{\delta_1/2}(x_1), I_{\delta_2/2}(x_2), \dotsc, I_{\delta_n/2}(x_n)$ covers $[a, b].$
+Let $\underline{\delta} = \min \{\delta_1/2, \delta_2/2, \dotsc, \delta_n/2\}.$
+Claim: $\underline{\delta}$ is what we are looking for.
+$\forall x, \exists k$ s.t. $x \in I_{\delta_k/2}(x_k).$
+When $x, y \in I_{\delta_k}(x_k),$ $|f(x) - f(y)| \leq |f(y) - f(x_k)| + |f(x_k) - f(x)| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon.$
+
+_Theorem._ If $f$ is continuous on $[a, b],$ then $f$ is Riemann summable on $[a, b].$
+
+_Proof._ (Simplified version.)
+Given $\epsilon > 0,$ $\exists \delta(\epsilon)$ s.t. $|f(y) - f(x)| < \frac{\epsilon}{b-a}$ when $|y - x| < \delta.$
+Since $f$ is continuous on $[a, b],$ $f$ is bounded above on $[a, b].$
+Split $[a, b]$ into $n$ equal parts so that $\frac{b-a}{n} < \delta.$
+Let \[U_n = \sum_{j=1}^n f(\xi_j)\Delta x_j, \xi_j = \max_{x\in [x_{j-1}, x_j]} f(x),\] \[L_n = \sum_{j=1}^n f(\eta_j)\Delta x_j, \eta_j = \min_{x\in [x_{j-1}, x_j]} f(x).\]
+Then $0 \leq U_n - L_n = \sum_{j=1}^n (f(\xi_j) - f(\eta_j))\Delta x_j.$
+Since $\xi_j, \eta_j \in [x_{j-1}, x_j],$ $|\xi_j - \eta_j| < |x_{j-1}-x_j| = \frac{b-a}{n} < \delta.$
+Thus $|f(\xi_j) - f(\eta_j)| < \frac{\epsilon}{b - a},$ that is, \[U_n - L_n < \frac{\epsilon}{b - a}\sum_{j=1}^n\Delta x_j = \frac{\epsilon}{b-a} \cdot (b-a) = \epsilon.\]
+So $f$ is Riemann summable on $[a, b].$
