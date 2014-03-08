@@ -1,0 +1,29 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 21
+---
+
+h3. Summary
+
+* $0, 1, +$ and set theory...
+* $\Rightarrow \mathbb{N},$
+* $\Rightarrow \mathbb{Z},$
+* $\Rightarrow \mathbb{Q}$ (lack completeness),
+* $\Rightarrow$ Construction of $\mathbb{R},$
+* $\Rightarrow$ Completeness of $\mathbb{R}$ $=$ Bolzano-Weierstrass Theorem $=$ Nested Interval Theorem.
+
+h4. Branch: Fundamental Theorem of Calculus
+
+* Completeness of $\mathbb{R}...$
+* $\Rightarrow$ Properties of continuous functions, "Mid-Value" Theorem, Extreme Value Theorem,
+* $\Rightarrow$ Rolle's Theorem, Mean Value Theorem, Mean Value Theorem for Integration,
+* $\Rightarrow$ Fundamental Theorem of Calculus.
+
+h4. Branch: Existence of Riemann integral
+
+* Completeness of $\mathbb{R}...$
+* $\Rightarrow$ Heine-Borel Theorem,
+* $\Rightarrow$ Uniformly Continuous Theorem,
+* $\Rightarrow$ Heine-Borel Theorem,
+* $\Rightarrow$ Existence of Riemann integral.
