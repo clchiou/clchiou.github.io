@@ -1,0 +1,24 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 22
+---
+
+h3. $f'$ Bounded Implies $f$ Uniformly Continuous
+
+_Theorem._ Given a set $I,$ which can be an open interval, a closed interval, or even $\mathbb{R},$ if $f'$ is bounded in $I,$ then $f$ is uniformly continuous in $I.$
+
+Note: Uniformly Continuous Theorem only applies to closed intervals.
+
+_Example._ $f(x) = \sqrt{x}, x \in [0, \infty),$ $f$ is uniformly continuous.
+
+* $f'$ is bounded on $(c, \infty), c \gt 0.$ So $f$ is uniformly continuous in $(c, \infty).$
+* $f$ is continuous in $[0, 2c].$ So by Uniformly Continuous Theorem, $f$ is uniformly continuous in $[0, 2c].$
+* Let $\delta(\epsilon) = \min\{\delta_1(\epsilon), \delta_2(\epsilon), c\}.$ So $f$ is uniformly continuous in $[0, \infty).$  Note: $c$ here is to make sure that $x - y < 0$ and thus $x$ and $y$ are in the same region.
+
+_Example._ $f(x) = \frac{1}{x}, 0 < x < 1,$ $f$ is *not* uniformly continuous.
+
+Uniformly continuous: $\forall \epsilon \exists \delta \forall |x-y| < \delta, |f(x)-f(y)| < \epsilon.$
+So we need to prove that $\forall \epsilon \forall \delta \exists |x-y| < \delta, |f(x)-f(y)| \ge \epsilon.$
+
+Since $x, y \in (0, 1),$ $|f(x) - f(y)| = |\frac{1}{x} - \frac{1}{y}| = \frac{|x-y|}{xy}.$ Let $\epsilon = 1$ and pick $x, y$ such that $|x-y| = \frac{\delta}{2} < \delta.$ So $|f(x) - f(y)| = $ $\frac{|x-y|}{xy} = $ $\frac{\delta}{2xy} \ge $ $\frac{\delta}{2x(x+\delta/2)} \ge $ $\epsilon = 1$ as long as $x < \frac{\delta}{2+\delta}.$
