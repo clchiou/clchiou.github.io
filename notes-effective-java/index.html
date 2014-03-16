@@ -1,0 +1,13 @@
+---
+layout: index
+title: Notes of Effective Java
+summary: Reading Notes of Effective Java, 2nd ed.
+---
+<div class="toc">
+{% for post in site.categories['notes-effective-java'] %}
+<article class="toc-item">
+  <h3 class="toc-title"><a class="toc-title" href="{{ post.url }}">{{ post.title }}</a></h3>
+  <a class="toc-snippet" href="{{ post.url }}"><p class="toc-snippet">{{ post.excerpt | strip_html }}</p></a>
+</article>
+{% endfor %}
+</div>
