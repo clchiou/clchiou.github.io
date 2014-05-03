@@ -1,0 +1,94 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 17
+---
+
+h3. Accumulation Point and Derived Set
+
+_Theorem._ All derived sets are closed.
+
+_Proof._
+Consider $x \in \overline{A'},$ because $\exists \delta > 0$ s.t. $I_\delta (x) \cap A = \emptyset\:\text{or}\: \{ x \},$ $I_\delta (x) \subset \overline{A}.$
+For all $y \in I_\delta (x),$ $\exists 0 < \delta' < \delta$ s.t. $I_{\delta'}(y) \cap A = \emptyset\:\text{or}\: \{ y \},$ so $y \in \overline{A'}.$
+Thus $I_\delta(x) \subset \overline{A'}.$
+In other words, $\forall x \in \overline{A'}, \exists \delta > 0$ s.t. $I_\delta(x) \subset \overline{A'}.$
+So $\overline{A'}$ is open, and thus $A'$ is closed.
+
+_Theorem._ $A$ is closed if and only if $A' \subseteq A.$
+
+_Proof._
+* ($\Rightarrow$)
+$\forall x \in \overline{A}, \exists I_\delta(x) \subset \overline{A}.$
+$\therefore I_\delta(x) \cap A = \emptyset.$
+$\therefore x \notin A'.$
+$\therefore A' \subseteq A.$
+
+* ($\Leftarrow$)
+$\forall x \in \overline{A}, x \notin A \rightarrow x \notin A'.$
+$\exists I_\delta(x) \cap A = \emptyset.$
+$\therefore I_\delta(x) \subset \overline{A}.$
+$\therefore \overline{A}\:\text{open}.$
+$\therefore A\:\text{closed}.$
+
+_Example._ Given $A = \{ \frac{1}{n}\:|\: n \in \mathbb{N} \},$ $0$ is an accumulation point of $A$ but $0 \notin A.$
+
+Remark: So $A$ is not closed (but this does mean it is open).
+
+_Example._ $Q = \mathbb{Q} \cap [0, 1]$ is not closed.
+
+It is not closed because every irrational number $x$ between $[0, 1]$ is an accumulation point of $Q$ but $x \notin Q.$
+
+_Example._ $\emptyset$ is open and closed.
+
+* Open: Since "$x \in \emptyset$" is a false statement, "$x \in \emptyset \Rightarrow \exists I_\delta(x) \subset \emptyset$" is true.
+* Closed: Since "$x$ is an accumulation point of $\emptyset$" is a false statement, "$x$ is an accumulation point of $\emptyset$ $\Rightarrow$ $x \in \emptyset$" is true.
+
+_Example._ $\mathbb{R}$ is open and closed.
+
+_Example._ If a set $A$ is open and closed, then it is either $\emptyset$ or $\mathbb{R}.$
+
+_Proof._
+Suppose $A \neq \emptyset$ and $A \neq \mathbb{R}.$
+Then $\forall x \in A, \exists (a, b)$ s.t. $x \in (a, b) \subset A.$
+Let $S = \{ a\:|\:x \in (a, b) \subset A \}$ and $T = \{ b\:|\:x \in (a, b) \subset A \}.$
+Since $A \neq \mathbb{R},$ $\exists y \notin A.$
+So either $S$ is bounded below or $T$ is bounded above.
+Without loss of generality, assume $T$ is bounded above.
+Let $\beta$ be the least upper bound of $T.$
+Then $\forall \delta > 0, I_\delta(\beta) \cap A - \{ \beta \} \neq \emptyset.$
+So $\beta$ is an accumulation point of $A.$
+$\because A\:\text{closed}.$
+$\therefore \beta \in A.$
+$\because A\:\text{open}.$
+$\therefore \exists I_\delta(\beta) \subset A.$
+Pick $\beta' = \beta + \delta.$
+Then $\beta' \in T$ and $\beta' > \beta,$ which is a contradiction.
+
+_Proof._ (Alternative proof.)
+Assume $A \ne \emptyset.$
+Since $A$ is open, $\exists x \in A$ s.t. $I_\delta(x) \subset A.$
+Let $\delta_0 = \sup \{ \delta\:|\:I_\delta(x) \subset A \}.$
+Claim: $\delta_0 = \infty$ (thus $A = \mathbb{R}$).
+Otherwise, $x+\delta_0$ and $x-\delta_0$ are limit points of $A.$
+Because $A$ is closed, $x+\delta_0 \in A.$
+Because $A$ is open, $\exists I_{\delta'}(x+\delta_0) \subset A.$
+Thus $\exists x' \in (x+\delta_0, x+\delta_0+\delta') \subset A.$
+Then $x' > x+\delta_0$ is a contradiction.
+
+_Definition._ $A$ is _perfect_ if $A' = A.$
+
+_Example._
+* $[a, b]$ is perfect.
+* $\{\frac{1}{n}\:|\:n=1,2,3,\dotsc\} \cup \{ 0 \}$ is closed but not perfect.
+* Cantor set is perfect.
+
+_Example._ If $A$ is perfect, then $A$ is uncountable.
+
+_Proof._ (Use diagonal argument; omit.)
+
+_Proof._
+Pick $x \in A.$  We may generate $x_0 < x < x_1$ and $x_0, x_1 \in A.$
+Then we may generate $x_{00}, x_{01}, x_{10}, x_{11}, \dotsc.$
+The set of $x_i$ can be mapped 1-1 to real numbers (via binary representation).
+So the set of $x_i$ is uncountable.
