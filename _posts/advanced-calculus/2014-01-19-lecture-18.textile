@@ -1,0 +1,28 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 18
+---
+
+h3. Heine-Borel Threorem
+
+_Example._ $\mathcal{F} = \{ (\frac{1}{n}, 1)\:|\:n = 1, 2, 3, \dots \}.$
+$\mathcal{F}$ covers $(0, 1)$ but does not cover $[0, 1].$
+
+_Theorem._ Heine-Borel Theorem.
+For all open covers $\mathcal{F}$ of $[a, b],$ there exists finite sub-cover of $\mathcal{F}$ of $[a, b].$
+
+Note: Finite sub-cover means we may take $\min, \max, \dots$ on it.
+
+_Proof._
+(Idea: Use bisection method, nested intervals, and proof by contradiction.)
+Suppose otherwise.  Let $I_0 = [a, b], I_{0,1} = [a, \frac{a+b}{2}], I_{0,2} = [\frac{a+b}{2}, b].$
+Since there does not exist a finite sub-cover, at least one of $I_{0,1}$ and $I_{0,2}$ must contain infinitely many sets from the open cover $\mathcal{F}.$
+Let it be $I_1 = [a_1, b_1]$ and construct $I_2.$
+So we will have $I_0 \supset I_1 \supset \cdots \supset I_n = [a_n, b_n]$ and $|I_n| = \frac{b-a}{2^n}.$
+By nested interval, $\exists! x_0 \in \mathbb{R}$ s.t. $\bigcap_{n=0}^\infty I_n = \{ x_0 \}.$
+In other words, $\lim_{n\to\infty} a_n = \lim_{n\to\infty} b_n = x_0.$
+Because $x_0$ is the limit of $\{ a_n \}$ and $a_n \in [a, b]$ which is closed, $x_0 \in [a, b].$
+That is, $\exists V \in \mathcal{F}$ s.t. $x_0 \in V.$
+So when $n$ is large enough, $[a_n, b_n] \subset V.$
+Then $\{ V \}$ is a finite sub-cover of $I_n,$ which is a contradiction.
