@@ -11,9 +11,12 @@
     <nav>
     <ul class="navigator">
       <li class="navigator"><a href="/">TOP</a></li>
-      {% for category in site.categories %}
-      <li class="navigator"><a href="/{{ category | first }}/">{{ category | first | replace: '-', ' ' | upcase }}</a></li>
+      {% for category in page.categories %}
+      <li class="navigator"><a href="/{{ category }}/">{{ category | replace: '-', ' ' | upcase }}</a></li>
       {% endfor %}
+      {% if page.categories == empty %}
+      <li class="navigator"><a href="/else/">ELSE</a></li>
+      {% endif %}
     </ul>
     </nav>
     <div class="content">

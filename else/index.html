@@ -1,20 +1,16 @@
 ---
 layout: index
-title: clchiou/blog
-summary: Notes, Sample Codes, etc.
+title: Else
+summary: Everything Uncategorized
 ---
 <div class="toc">
-<article class="toc-item">
-  <h3 class="toc-title">Sitemap</h3>
-  {% for category in site.categories %}
-  <a href="/{{ category | first }}/">{{ category | first | replace: '-', ' ' }}</a><br />
-  {% endfor %}
-  <a href="/else/">else</a><br />
-</article>
 {% for post in site.posts %}
+{% if post.categories == empty %}
 <article class="toc-item">
   <h3 class="toc-title"><a class="toc-title" href="{{ post.url }}">{{ post.title }}</a></h3>
   <a class="toc-snippet" href="{{ post.url }}"><p class="toc-snippet">{{ post.excerpt | strip_html }}</p></a>
 </article>
+{% endif %}
 {% endfor %}
 </div>
+
