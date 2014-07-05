@@ -1,0 +1,56 @@
+#!/usr/bin/env python
+
+'''Examine what is changed between two commits.'''
+
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
+
+
+def execute(cmd, cwd=None, stdout=None):
+    '''Simple wrapper of subprocess.check_call().'''
+    subprocess.check_call(cmd, cwd=cwd, stdout=stdout)
+
+
+def git_clone(repo, path):
+    '''Run git clone.'''
+    execute(['git', 'clone', repo, path],
+            stdout=sys.stderr)
+
+
+def git_checkout(repo, commit):
+    '''Run git checkout.'''
+    execute(['git', 'checkout', commit],
+            cwd=repo, stdout=sys.stderr)
+
+
+def main(argv):
+    '''main function.'''
+    if len(argv) < 2:
+        print ('Usage: %s commit [commit] | colordiff' %
+               os.path.basename(argv[0]))
+        return 1
+    commits = {'left': argv[1], 'right': argv[2] if len(argv) > 2 else 'HEAD'}
+    repo = os.getcwd()
+    if not os.path.isdir(os.path.join(repo, '.git')):
+        raise Exception('Could not find .git here: cwd=%s' % repo)
+    tempdir_path = tempfile.mkdtemp()
+    try:
+        jekyll_build = ['jekyll', 'build']
+        for side in ('left', 'right'):
+            side_repo = os.path.join(tempdir_path, side)
+            git_clone(repo, side_repo)
+            git_checkout(side_repo, commits[side])
+            execute(jekyll_build, cwd=side_repo, stdout=sys.stderr)
+        ret = subprocess.call(['diff', '-ruN', '--exclude=atom.xml',
+                              os.path.join(tempdir_path, 'left/_site'),
+                              os.path.join(tempdir_path, 'right/_site')])
+    finally:
+        shutil.rmtree(tempdir_path)
+    return ret
+
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv))
