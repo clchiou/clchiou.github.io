@@ -4,7 +4,7 @@ category: advanced-calculus
 title: Lecture 6
 ---
 
-h3. Basic Topology and Measure
+h3. Counting and Basic Measure
 
 _Theorem._  If $A_n$ is countable, then $\bigcup_{n=1}^\infty A_n$ is countable.
 
@@ -29,8 +29,6 @@ _Theorem._ The real numbers in $(0, 1)$ is uncountable.
 
 _Proof._
 (Diagonal argument.)
-
-h4. Basic Topology
 
 _Definition._ Given two sets $A$ and $B,$
 * ${\small\#}A \leq {\small\#}B$ if $\exists f: A \mapsto B$ where $f$ is 1-to-1, and
