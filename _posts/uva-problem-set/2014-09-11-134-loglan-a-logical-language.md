@@ -9,7 +9,7 @@ Write a parser to solve this [problem](http://uva.onlinejudge.org/index.php?opti
 There are may choices of parser family: LL, LALR, SLR, etc.
 I rewrote the grammar slightly and
 [implemented](https://github.com/clchiou/uva-problem-set/blob/master/solved/134/134.cc)
-a simple (but inefficient) back-tracing parser.
+a simple (but inefficient) back-tracking parser.
 Keep in mind that although the problem states:
 "You can assume that all words will be correctly formed."
 This statement is not 100% right.
