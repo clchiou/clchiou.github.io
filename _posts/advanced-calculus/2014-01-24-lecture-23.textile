@@ -23,6 +23,6 @@ Bounded: $\mathcal{F} = \{ (x-1, x+1)\:|\:x \in A \}$ is an open covering of $A.
 Closed: $\forall y \in \overline{A},$ let $\mathcal{F}_y = \{ I_{\delta/2}(x)\:|\: x \in A, \delta = |x-y| \}.$ Then $\mathcal{F}_y$ is an open covering of $A.$ $\exists x_1, \dotsc, x_n$ such that $\cup_{k=1}^n I_{\delta_k/2}(x_k) \supset A.$ Consider $\underline{\delta} = \min \delta_k,$ then $I_{\underline{\delta}/2}(y) \cap I_{\delta_k/2}(x_k) = \emptyset$ for all $k.$ So $I_{\underline{\delta}/2}(y) \cap A = \emptyset,$ that is, $I_{\underline{\delta}/2}(y) \subset \overline{A}.$ Because $\overline{A}$ is open, $A$ is closed.
 
 Summary:
-* Compact $\Rightarrow$ bounded and close: This direction of proof only needs metric space topology and does not need completeness; thus more generic.
-* Bounded and close $\Rightarrow$ compact: This direction needs completeness (Heine-Borel's argument).
+* Compact $\Rightarrow$ bounded and closed: This direction of proof only needs metric space topology and does not need completeness; thus more generic.
+* Bounded and closed $\Rightarrow$ compact: This direction needs completeness (Heine-Borel's argument).
 * In other words, compactness is a more generic concept.
