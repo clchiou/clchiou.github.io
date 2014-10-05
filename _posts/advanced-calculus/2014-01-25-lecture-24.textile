@@ -1,0 +1,20 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 24
+---
+
+h3. Sequentially Compact
+
+_Definition._ $A \subset \mathbb{R}$ is _sequentially compact_ if for all sequence $\{ x_n \} \subset A,$ there is a subsequence $x_{n_k} \to x_0 \in A.$
+
+_Example._ $A = (0, 1)$ is not sequentially compact.
+According to Bolzano-Weierstrass Theorem, every sequence has a converging subsequence, but it does not guarantee that $x_0 \in A;$ for example, given $x_n = \frac{1}{n},$ any converging $x_{n_k} \to 0.$
+
+_Example._ $A = [0, 1]$ is sequentially compact.
+Because $A$ is bounded, according to Bolzano-Weierstrass Theorem, every sequence has a converging subsequence $x_{n_k}.$ Say $x_{n_k} \to x_0,$ then $x_0$ is an accumulation point of $A.$ Since $A$ is closed, $x_0 \in A.$
+
+_Example._ $A = [0, \infty)$ is not sequentially compact.
+$x_n = n$ does not have a converging subsequence.
+
+It should be easy to see that bounded and closed implies sequentially compact in $\mathbb{R}.$
