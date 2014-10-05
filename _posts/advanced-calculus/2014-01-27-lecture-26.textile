@@ -1,0 +1,34 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 26
+---
+
+h3. Prelude to Equivalence of Compactness and Sequential Compactness
+
+Limit of a sequence and limit point of a set is almost interchangeable, but:
+* There could be duplicated values in a sequence, but no in a set.
+* This is why when proving properties of sequences, you sometimes have to consider finitely many values vs infinitely many values.
+
+To sum up:
+
+|<. $x_n \to x$ |=. $\nRightarrow$ |>. $x$ is a limit point of $A$...                             |
+|               |                  |>. ...unless there are infinitely many values of the sequence |
+|<. $x_n \to x$ |=. $\Leftarrow$   |>. $x$ is a limit point of $A$                                |
+|<. Arithmetic  |                  |>. Topology                                                   |
+
+h4. Bounded and closed vs (sequential) compactness
+
+|<. Bounded and closed  |=. $\Rightarrow$ because...     |>. Compactness            |
+|                       |=. Nested Interval Theorem      |                          |
+|                       |=. Completeness of $\mathbb{R}$ |                          |
+|<. Bounded and closed  |=. $\Leftarrow$ because...      |>. Compactness            |
+|                       |=. $\delta/2$ argument          |                          |
+|<. Bounded and closed  |=. $\Rightarrow$ because...     |>. Sequential compactness |
+|                       |=. Bolzano-Weierstrass Theorem  |                          |
+|                       |=. Completeness of $\mathbb{R}$ |                          |
+|<. Bounded and closed  |=. $\Leftarrow$ because...      |>. Sequential compactness |
+|                       |=. Triangle inequality          |                          |
+|                       |=. Metric space                 |                          |
+
+To prove compactness $\Leftrightarrow$ sequential compactness in generic metric space, we cannot go through the bounded-and-closed path, which requires completeness. We need to go through properties of topological space.
