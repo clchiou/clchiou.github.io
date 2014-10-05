@@ -1,0 +1,28 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 27
+---
+
+h3. Topology
+
+Basically, this is what we want from a topology:
+* Openness is preserved under union and finite intersection.
+* Closed-ness is preserved under intersection and finite union.
+
+_Definition._ Given a set $\mathbb{X}$ and a family of subsets $\mathcal{T}$ of $\mathbb{X},$ we call $\mathcal{T}$ a _topology_ of $\mathbb{X}$ if:
+* $\emptyset \in \mathcal{T}$ and $\mathbb{X} \in \mathcal{T}.$
+* If $A_\lambda \in \mathcal{T},$ then $\cup_\lambda A_\lambda \in \mathcal{T}.$
+* If $A_1, \dotsc, A_n \in \mathcal{T},$ then $\cap_{i=1}^n A_i \in \mathcal{T}.$
+
+And $(\mathbb{X}, \mathcal{T})$ is called a _topological space,_ and every set of $\mathcal{T}$ is called an open set.
+
+Note: As you can see, there is no _distance_ concept in a topological space. We only think about _neighborhoods_ in a topological space.
+
+_Definition._ $x$ is an _interior point_ of $A$ if $\exists I_x, x \in I_x \in \mathcal{T},$ $I_x \subset A.$ An _interior set_ $\dot{A}$ of $A$ is the set of all interior points of $A.$
+
+_Definition._ $x$ is a _limit point_ of $A$ if $\forall I_x, x \in I_x \in \mathcal{T},$ $I_x \cap A - \{x\} \ne \emptyset.$ A derived set $A'$ of $A$ is the set of all limit points of $A.$
+
+_Definition._ $A$ is _perfect_ if $A' = A.$
+
+Note: $\dot{A}$ is open and $A'$ is closed.
