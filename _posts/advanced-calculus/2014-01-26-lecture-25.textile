@@ -1,0 +1,22 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 25
+---
+
+h3. Sequential Compactness and Bounded and Closed
+
+_Theorem._ Given $A \subset \mathbb{R},$ $A$ is bounded and closed if and only if $A$ is sequentially compact.
+
+_Proof._
+($\Leftarrow$)
+* Claim: $A$ is bounded.
+Otherwise, pick any $x \in A.$ Since $A$ is unbounded, $\forall n, \exists x_n \in A, |x-x_n|>n.$ And since $A$ is sequentially compact, $\exists x_{n_k} \to x_0 \in A.$ So $|x - x_0| \ge |x - x_{n_k}| - |x_{x_k} - x_0|$ where $x-x_0$ is finite, but $x-x_{n_k}$ diverges and $x_{n_k}-x_0$ approaches $0.$
+* Claim: $A$ is closed.
+For all accumulation points $x_0$ of $A,$ there is a sequence $x_n \in A$ that $x_i \ne x_j$ whenever $i \ne j$ such that $x_n \to x_0.$ Since $A$ is sequentially compact, $\exists x_{n_k} \to x'_0 \in A.$ And since $x_n \to x_0,$ $x_0 = x'_0 \in A.$ So $A$ is closed.
+(If $A$ is finite, then it is closed although it does not have accumulation points.)
+
+($\Rightarrow$)
+Let $x_n \in A.$
+* If $\{x_n\}$ has finitely many values, then some value $x$ is repeated infinitely many times. Let $x_{n_k} = x.$ Then $x_{n_k} \to x \in A.$
+* If $\{x_n\}$ has infinitely many values, since $A$ is bounded, according to Bolzano-Weierstrass Theorem, there is a converging subsequence $x_{n_k} \to x_0$ where $x_0$ is an accumulation point of $A.$ And since $A$ is closed, $x_0 \in A.$
