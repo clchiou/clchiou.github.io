@@ -21,7 +21,7 @@ Here is our grand plan:
 * $\Rightarrow$ If $f$ continuous in $[a, b],$ then Rizmann summable in $[a, b].$
 
 _Theorem._ Heine-Borel Theorem.
-If $\mathcal{F}$ is a family of open sets covering $[a, b]$ ($\forall x \in [a, b], \exists V \in \mathcal{F}$ s.t. $x \in V$), then there are finitely many open sets $V_1, V_2, \dotsc, V_n \in \mathcal{F}$ s.t. $[a, b] \subset \bigcup_{i=1}^n V_i.$
+If $\mathcal{F}$ is a family of open sets cover $[a, b]$ ($\forall x \in [a, b], \exists V \in \mathcal{F}$ s.t. $x \in V$), then there are finitely many open sets $V_1, V_2, \dotsc, V_n \in \mathcal{F}$ s.t. $[a, b] \subset \bigcup_{i=1}^n V_i.$
 
 To prove Heine-Borel Theorem, we have to go back to the topology of $\mathbb{R}.$
 

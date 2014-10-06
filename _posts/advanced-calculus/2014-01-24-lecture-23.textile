@@ -8,7 +8,7 @@ h3. Compactness
 
 Compactness is ubiquitous in mathematics, probably except only algebra, because it is very useful and can be defined on topology space.
 
-_Definition._ $A$ is _compact_ if every open covering of $A$ reduces to a finite subcovering.
+_Definition._ $A$ is _compact_ if every open cover of $A$ reduces to a finite subcover.
 
 Heine-Borel: $[a, b]$ is compact.
 
@@ -18,9 +18,9 @@ _Theorem._ If $A$ is compact, then $A$ is bounded and closed.
 
 _Proof._
 
-Bounded: $\mathcal{F} = \{ (x-1, x+1)\:|\:x \in A \}$ is an open covering of $A.$ Since $A$ is compact, $\exists x_1, \dotsc, x_n$ such that $\cup_{k=1}^n (x_k-1, x_k+1) \supset A.$ Let $\underline{x} = \min x_k, \overline{x} = \max x_k.$ Then $[\underline{x} - 1, \overline{x} + 1] \supset A.$ So $A$ is bounded.
+Bounded: $\mathcal{F} = \{ (x-1, x+1)\:|\:x \in A \}$ is an open cover of $A.$ Since $A$ is compact, $\exists x_1, \dotsc, x_n$ such that $\cup_{k=1}^n (x_k-1, x_k+1) \supset A.$ Let $\underline{x} = \min x_k, \overline{x} = \max x_k.$ Then $[\underline{x} - 1, \overline{x} + 1] \supset A.$ So $A$ is bounded.
 
-Closed: $\forall y \in \overline{A},$ let $\mathcal{F}_y = \{ I_{\delta/2}(x)\:|\: x \in A, \delta = |x-y| \}.$ Then $\mathcal{F}_y$ is an open covering of $A.$ $\exists x_1, \dotsc, x_n$ such that $\cup_{k=1}^n I_{\delta_k/2}(x_k) \supset A.$ Consider $\underline{\delta} = \min \delta_k,$ then $I_{\underline{\delta}/2}(y) \cap I_{\delta_k/2}(x_k) = \emptyset$ for all $k.$ So $I_{\underline{\delta}/2}(y) \cap A = \emptyset,$ that is, $I_{\underline{\delta}/2}(y) \subset \overline{A}.$ Because $\overline{A}$ is open, $A$ is closed.
+Closed: $\forall y \in \overline{A},$ let $\mathcal{F}_y = \{ I_{\delta/2}(x)\:|\: x \in A, \delta = |x-y| \}.$ Then $\mathcal{F}_y$ is an open cover of $A.$ $\exists x_1, \dotsc, x_n$ such that $\cup_{k=1}^n I_{\delta_k/2}(x_k) \supset A.$ Consider $\underline{\delta} = \min \delta_k,$ then $I_{\underline{\delta}/2}(y) \cap I_{\delta_k/2}(x_k) = \emptyset$ for all $k.$ So $I_{\underline{\delta}/2}(y) \cap A = \emptyset,$ that is, $I_{\underline{\delta}/2}(y) \subset \overline{A}.$ Because $\overline{A}$ is open, $A$ is closed.
 
 Summary:
 * Compact $\Rightarrow$ bounded and closed: This direction of proof only needs metric space topology and does not need completeness; thus more generic.
