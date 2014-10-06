@@ -1,0 +1,40 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 30
+---
+
+h3. More Examples of Metric Spaces and Norm Spaces
+
+_Definition._ Given a metric space $(\mathbb{X}, d),$ it is _complete_ if every Cauchy sequence converges.
+
+_Example._ Discrete metric space is complete.
+The only kind of Cauchy sequence in discrete metric space is $x_n = x_m = x$ for all $n, m > N$ for some $N.$
+
+_Example._ $\mathbb{X} = \mathbb{R}$ and $d(x, y) = |\tan^{-1}x - tan^{-1}y|$ is incomplete.
+First you have to prove that it is a metric space. Then Cauchy sequence $x_n = n$ does not converge; so it is incomplete.
+
+_Example._ $\mathbb{X} = (0, 1)$ and $d(x, y) = |x-y|$ is incomplete.
+Cauchy sequence $x_n = 1/n$ converges to $0 \notin \mathbb{X}.$
+
+_Definition._ $(\mathbb{X}, \|\cdot\|)$ is a _norm space_ if
+* It is a vector space.
+* $\|x\| = 0$ if and only if $x = 0.$
+* $\|x+y\| \le \|x\| + \|y\|.$
+* $\|\alpha x\| = |\alpha| \cdot \|x\|, \alpha \in \mathbb{R}\ \text{or}\ \mathbb{C}.$
+
+_Definition._ Banach space is a complete norm space.
+
+_Example._ <notextile>$\mathbb{X} = C[0, 1]$ and $\|f\|_\infty = \max_{a \le x \le b} |f(x)|$</notextile> is a Banach space.
+* $\|\cdot\|_\infty$ is a norm on $\mathbb{X},$ called sup norm.
+* It is complete.
+
+_Example._ $L^2[a, b] = \{ f\:|\: \int_a^b f(x)^2\,\mathrm{d}x < \infty \}$ and <notextile>$\|f\|_2 = \left(\int_a^b f(x)^2\,\mathrm{d}x\right)^{1/2}.$</notextile>
+* If we adopt Riemann integral (split in domain), then it is incomplete, but if we adopt Lebesgue integral (split in range), then it is complete.
+* Furthermore, if we adopt Lebesgue integral, we may define inner product $f \cdot g$ as $\int_a^b f(x)g(x)\,\mathrm{d}x$ because:
+** $|\int_a^b f(x)g(x)\,\mathrm{d}x| \le (\int_a^b f(x)^2\,\mathrm{d}x)^{1/2} (\int_a^b g(x)^2\,\mathrm{d}x)^{1/2} < \infty$ so $f \cdot g$ is well-defined.
+** The induced norm from inner product is $|f \cdot f|^{1/2} = (\int_a^b f(x)^2\,\mathrm{d}x)^{1/2} = \|f\|_2,$ which is complete.
+* This is a Hilbert space.
+
+_Example._ $C[0, 1] \subset L^2[0, 1],$ but <notextile>$(C[0, 1], \|\cdot\|_2)$</notextile> is incomplete (note: not <notextile>$\|\cdot\|_\infty$</notextile>).
+Consider this: \[f(x) = \left\{\begin{array}{ll} 0 & 0 \le x < \frac{1}{2} \\ \frac{1}{2} & x = \frac{1}{2} \\ 1 & \frac{1}{2} < x \le 1 \end{array}\right.\] Clearly $f \notin C[0, 1].$ Let \[f_n(x) = \left\{\begin{array}{ll} 0 & 0 \le x < \frac{1}{2}-\frac{1}{n} \\ \frac{nx}{2}-\frac{n}{4} + \frac{1}{2} & \frac{1}{2} - \frac{1}{n} \le x \le \frac{1}{2} + \frac{1}{n} \\ 1 & \frac{1}{2} + \frac{1}{n} < x \le 1 \end{array}\right.\] Then $\int_0^1|f_n(x)-f(x)|^2\,\mathrm{d}x \le \frac{2}{n} \to 0.$ So $f_n \to f \notin C[0, 1]$ and thus it is incomplete.
