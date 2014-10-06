@@ -1,0 +1,19 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 28
+---
+
+h3. Cardinality of a Perfect Set in $\mathbb{R}^n$
+
+_Lemma._ If $|x_n - x_{n+1}| \lt \frac{1}{2^n},$ then $x_n$ converges.
+
+_Proof._
+$\forall \epsilon \gt 0,$ $\exists N$ such that $\sum_{k=n}^\infty \frac{1}{2^k} \lt \epsilon$ when $n \gt N.$ Let $m \gt n \gt N.$ Then $|x_n - x_m| \le \sum_{k=n}^{m-1} |x_k - x_{k+1}| \lt \sum_{k=n}^\infty \frac{1}{2^k} \lt \epsilon.$ So $x_n$ is a Cauchy sequence and converges.
+
+Remark: If $\sum \lambda_n < \infty,$ $\lambda_n > 0,$ and $|x_{n+1} - x_n| \le \lambda_n,$ then $x_n$ converges.
+
+_Theorem._ Given a non-empty set $A \subset \mathbb{R}^n,$ if $A$ is perfect, then $\#A = \#\mathbb{R}^n.$
+
+_Proof._ (Generation method.)
+Pick any $x_0 \in A$ (because $A$ is perfect, $x_0$ is a limit point). Then pick $x_1 \in B_1(x_0) \cap A - \{ x_0 \}$ where $B_1(x_0)$ is a unit ball centered at $x_0.$ Consider $B_{1/2}(x_0)$ and $B_{1/2}(x_1).$ Since $x_0$ and $x_1$ are limit points, there are all distinct values $x_{0,0}, x_{0,1} \in B_{1/2}(x_0) \cap A - \{ x_0 \}$ and $x_{1,0}, x_{1,1} \in B_{1/2}(x_1) \cap A - \{ x_1 \}.$ We may continue this process to the infinity, and we will have $x_{b_1}, x_{b_1,b_2}, x_{b_1,b_2,b_3}, \dots$ where $b_i$ is a binary digit. Since $|x_{b_1,\dotsc,b_n} - x_{b_1,\dotsc,b_n,b_{n+1}}| < \frac{1}{2^n},$ $x_{\{b_i\}}$ converges to, say, $x_b$ where $b \in [0, 1].$ And since $A$ is perfect and $x_{\{b_i\}} \in A,$ $x_b \in A.$ That is, there is a 1-to-1 mapping between $[0, 1]$ and $\{ x_b \} \subset A.$ So $\#A = \#\mathbb{R}^n.$
