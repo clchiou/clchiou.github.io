@@ -1,0 +1,18 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 31
+---
+
+h3. Compactness and Metric Space
+
+_Theorem._ Given a compact metric space $\mathbb{X},$ if $A$ is closed in $\mathbb{X},$ then $A$ is compact.
+
+_Proof._
+Let $\mathcal{F}$ be an open cover of $A.$ Let $\mathcal{F}' = \mathcal{F} \cup \{ \overline{A} \}$ (note that $\overline{A}$ is open). Then $\mathcal{F}'$ is an open cover of $\mathbb{X}.$ Since $\mathbb{X}$ is compact, there is a finite sub-cover of $\mathcal{F}'$ that covers $\mathbb{X}.$ Remove $\overline{A}$ from the sub-cover (if it is in there), then we have a finite sub-cover of $\mathcal{F}$ that covers $A.$ So $A$ is compact.
+
+_Example._ In general, in a metric space, bounded and closed $\nRightarrow$ compact or sequentially compact.
+Let $l_2 = \{(x_1,x_2,\dots)\:|\: x_n \in \mathbb{R}, \sum_{n=1}^\infty x_n^2 < \infty \}$ and <notextile>$\|x\|_2 = (\sum x_n^2)^{1/2},$</notextile> which is a Hilbert space.
+Let $A = \{x_n = (0, 0, \dotsc, 0, 1, 0, \dotsc, 0) \}$ that $n$-th dimension is $1$ and all others are $0.$ It is obviously that $A$ is closed because $\|x_n - x_m\|_2 = \sqrt{2}$ ($A$ is discrete). Also $A$ is bounded.
+* $A$ is not compact: Consider an open cover $\mathcal{F} = \{ I_{\sqrt{2}/2}(x)\:|\: x \in A \},$ which cannot have a finite sub-cover that covers $A.$
+* $A$ is not sequentially compact: Since $\|x_m - x_n\|_2 = \sqrt{2},$ there cannot be a converging subsequence.
