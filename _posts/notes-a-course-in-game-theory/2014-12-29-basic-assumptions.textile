@@ -1,0 +1,39 @@
+---
+layout: post
+category: notes-a-course-in-game-theory
+title: Basic Assumptions
+---
+
+Assumptions of a rational decision maker: Rational and reason strategically.
+
+* The fundamental entity of a game: Player.
+* Rational. Exogenous objectives, a complete transitive reflexive binary relation.
+* Reason strategically.
+
+Game theory vs theory of competitive equilibrium:
+
+* Game theory: Player vs player.
+* Theory of competitive equilibrium:
+** Player vs environment.
+** Environment variables, e.g., price.
+
+Elements of a game:
+* A set of actions $A.$
+* A set of consequence $C.$
+* A consequence function $g: A \mapsto C.$
+
+von Neumann and Morgenstern (1944) and Savage (1973):
+* $g(a)$ is a probability distribution on $C.$
+* Use real-valued utility function $u.$
+* von Neumann-Morgenstern utility: $E[u(g(a))].$
+
+If $g$ is not given, the decision maker is assumed to behave as if he has in mind a (subjective) consequence function.  In other words, he has in mind a state space $\Omega,$ a probability measure $\mu$ over $\Omega,$ a function $g: A \times \Omega \mapsto C,$ a utility function $u: C \mapsto \mathbb{R}.$  He is assumed to solve $\max_a E[u(g(a, \omega))]$ with respect to $\mu.$
+
+Note: Since $\mu$ is known to the player, the player is uncertain but *fully aware of* the state and the full state space.
+
+Interpretations of solutions (don't confuse the two interpretations):
+
+* Steady state (see Nash equilibrium, chapter 2).
+** Players know the equilibrium and act accordingly.
+* Deductive (see Iterated elimination of dominated actions, chapter 4).
+** Players *do not know the equilibrium* and decide their action strategically.
