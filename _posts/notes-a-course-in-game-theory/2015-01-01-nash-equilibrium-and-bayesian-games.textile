@@ -1,0 +1,58 @@
+---
+layout: post
+category: notes-a-course-in-game-theory
+title: Nash Equilibrium and Bayesian Games
+---
+
+A Nash equilibrium is a fixed point of the best response function.  Bayesian games can model both uncertainty about payoffs and *uncertainty about knowledge*.
+
+A strategic game:
+
+* A finite set of players $N.$
+* A profile of nonempty set of actions $(A_i).$
+* A profile of preference relations $(\succsim_i)$ on $A.$
+
+Variations:
+
+* Consequence function:
+** $g: A \mapsto C.$
+** $a \succsim_i b$ iff. $g(a) \succsim_i^* g(b).$
+* Exogenous random variable (this is _not_ a Bayesian game):
+** $g: A \times \Omega \mapsto C.$
+** A lottery over C is induced by $g(a, \cdot).$
+** $\succsim_i^*$ compares lotteries over $C.$
+
+A Bayesian Game:
+
+* A finite set of players $N.$
+* A (usually) finite set of states $\Omega.$
+* A profile of actions $(A_i).$
+* A profile of (usually) finite set of types $(T_i).$
+* A profile of type functions $(\tau_i)$ where $\tau_i: \Omega \mapsto T_i.$
+* A profile of probability measures, i.e., prior beliefs, $(p_i)$ on $\Omega$ for which we assume $p_i(\tau_i^{-1}(t_i)) > 0$ for all $t_i \in T_i.$
+* A profile of preference relations $(\succsim_i)$ on the set of probability measures over $A \times \Omega$ (*not* over only $\Omega$).
+
+Note: $\succsim_i$ is over $A \times \Omega,$ not only $\Omega,$ because each player is uncertain about other's action, too.
+
+Posterior belief is <notextile>\[\left\{\begin{array}{lr}
+\frac{p_i(\omega)}{p_i(\tau_i^{-1}(t_i))} & \omega \in \tau_i^{-1}(t_i) \\
+0 & \text{otherwise.} \\
+\end{array}\right.\]</notextile>
+
+Note:
+
+* Bayes' theorem states that \[P(A|B) = \frac{P(B|A)P(A)}{P(B)}\] where
+** $P(A)$ is the prior belief, and
+** $P(A|B)$ is the posterior belief.
+* We assume $p_i(\tau_i^{-1}(t_i)) > 0$ for all $t_i \in T_i$ so the posterior belief is well-defined.
+
+A Nash equilibrium of a Bayesian game is a Nash equilibrium of the strategic game defined as follows.
+
+* The set of players: $\{ (i, t_i)\:|\: i\in N, t_i \in T_i \}.$
+* The set of action of player $(i, t_i)$ is $A_i.$
+* The preference ordering <notextile>$\succsim_{(i, t_i)}^*$</notextile> is defined by <notextile>\[a^* \succsim_{(i, t_i)}^* b^*\ \text{iff.}\ L_i(a^*, t_i) \succsim_i L_i(b^*, t_i),\]</notextile> where <notextile>$L_i(a^*, t_i)$</notextile> is the lottery over $A \times \Omega$ that assigns posterior probability to <notextile>$((a^*(j, \tau_j(\omega)))_{j \in N}, \omega).$</notextile>
+
+Note:
+
+* Although each player knows his own type, other players don't; so he has to consider other's uncertainty about his type.  This is why the equilibrium cannot be defined for each state in isolation.
+* <notextile>$(a^*(j, \tau_j(\omega)))_{j \in N} \in A$</notextile> is the action profile given that state is $\omega.$
