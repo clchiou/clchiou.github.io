@@ -1,0 +1,20 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 33
+---
+
+h3. Equivalence of Compactness and Sequential Compactness (2)
+
+Tip: When you get stuck, try solving special case.  You will sometimes find clues for solving the original problem.
+
+_Definition._ In a metric space, a set $A$ is _totally bounded_  if for all $\epsilon > 0,$ the open cover $\mathcal{F} = \{ B_\epsilon(x) \:|\: x \in A \}$ can be reduced to a finite subcover.
+
+Note: Totally boundedness is a special case of compact.
+
+_Example._ $(0, 1)$ is totally bounded but not compact.
+
+_Theorem._ In a metric space, if a set is sequentially compact, then it is totally bounded.
+
+_Proof._
+Suppose otherwise, there exists $\epsilon > 0$ such that any finite subcover cannot cover $A.$  Pick any $x_1 \in A.$ $\{B_\epsilon(x_1)\}$ is not a cover of $A.$  Pick any $x_2 \in A - B_\epsilon(x_1).$  $\{B_\epsilon(x_1), B_\epsilon(x_2)\}$ is not a cover of $A,$ either.  Pick any $x_3 \in A - B_\epsilon(x_1) \cup B_\epsilon(x_2).$  We continue this process and get a sequence $\langle x_i \rangle.$  For any $i \ne j,$ $d(x_i, x_j) \geq \epsilon.$  So $\langle x_i \rangle$ cannot have a converging subsequence, which is a contradiction.
