@@ -1,0 +1,26 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 34
+---
+
+h3. Equivalence of Compactness and Sequential Compactness (3)
+
+_Definition._ A set $S$ is a _big set_ of $\mathcal{F}$ if for all $V \in \mathcal{F}, S \nsubseteq V.$
+
+_Definition._ $\mathrm{diameter}\,S = \sup_{x,y \in S} d(x, y).$
+
+_Definition._ (Diameter of minimum big set.) $\lambda$ is a _Lebesgue number_ of $\mathcal{F}$ if for all $\delta < \lambda$ and $x \in A,$ $B_\delta(x)$ is not a big set of $\mathcal{F}.$
+
+_Theorem._ If $A$ is sequentially compact and $\mathcal{F}$ is an open cover of $A,$ then there exists a Lebesgue number greater than $0.$
+
+_Proof._
+If there is not big set of $\mathcal{F},$ then any $\lambda > 0$ is a Lebesgue number.
+Else, let $\lambda = \inf \{ \mathrm{diameter}\,S \:|\: S\ \text{is a big set of}\ \mathcal{F} \}.$
+Claim: $\lambda > 0.$
+Suppose otherwise, $\lambda = 0.$  Then for all $n,$ there exists a big set $S_n$ such that $\mathrm{diameter}\,S_n < \frac{1}{n}.$  Pick $x_n \in S_n \cap A.$  Because $A$ is sequentially compact, there exists $x_{n_k} \to x_0 \in A.$  Since $\mathcal{F}$ covers $A,$ there exists $V \in \mathcal{F}$ such that $x_0 \in V.$ And since $V$ is open, there exists $\delta > 0$ such that $B_\delta(x_0) \subset V.$
+
+## $x_{n_k} \to x_0.$  So $\exists N_1$ s.t. $x_{n_k} \in B_{\delta/2}(x_0)$ for all $k > N_1.$
+## $\mathrm{diameter}\,S_{n_k} < \frac{1}{n_k}.$  So $\exists N_2$ s.t. $\frac{1}{n_k} < \frac{\delta}{2}$ for all $k > N_2.$
+
+Let $N = \max \{N_1, N_2\}.$  Then for all $k > N,$ $S_{n_k} \subset B_\delta(x_0) \subset V.$  So $S_{n_k}$ is not a big set, which is a contradiction.
