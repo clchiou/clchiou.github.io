@@ -1,0 +1,16 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 32
+---
+
+h3. Equivalence of Compactness and Sequential Compactness (1)
+
+_Theorem._ In a metric space, if a set is compact, then it is sequentially compact.
+
+_Proof._
+Let $(\mathbb{X}, d)$ be a compact metric space.  Let $\langle x_n \rangle \subset \mathbb{X}.$
+* If $\langle x_n \rangle$ has finitely many values, then there must be at least one value appearing infinitely many times in $\langle x_n \rangle.$  The elements of that value is our converging subsequence.
+* $\langle x_n \rangle$ has infinitely many values.
+  Claim: $\exists x \in \langle x_n \rangle$ such that $x$ is an accumulation point of $\langle x_n \rangle.$  (Thus there is a converging subsequence to $x.$)
+  Otherwise, consider $\mathcal{F} = \{ B_{\delta(x)}(x) \:|\: x \in \mathbb{X}, B_{\delta(x)}(x) \cap  \langle x_n \rangle\ \text{is a finite set} \}.$  Since $\mathcal{F}$ is an open cover of a compact space $\mathbb{X},$ there exists a finite subcover $\{ B_{\delta(x_i)}(x_i) \:|\: i = 1, \dotsc, n \}$ such that $\langle x_n \rangle \subset \mathbb{X} \subset \bigcup_{i=1}^n B_{\delta(x_i)}(x_i).$  Also, $B_{\delta(x_i)}(x_i) \cap \langle x_n \rangle$ is finite. So, $\langle x_n \rangle$ is finite, which is a contradiction.
