@@ -1,0 +1,12 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 35
+---
+
+h3. Equivalence of Compactness and Sequential Compactness (4)
+
+_Theorem._ In a metric space, if a set $A$ is sequentially compact, then it is compact.
+
+_Proof._
+Since $A$ is sequentially compact, there exists Lebesgue number $\lambda > 0$ of $\mathcal{F}.$  For any $0 < \epsilon < \lambda,$ consider $\{ B_\epsilon(x) \:|\: x \in A \}.$  Also, since $A$ is sequentially compact, $A$ is totally bounded.  So there exists $x_1, \dotsc, x_n$ s.t. $\bigcup_{i=1}^n B_\epsilon(x_i) \supset A.$  Because $\epsilon < \lambda,$ $B_\epsilon(x_i)$ is not a big set and there exists $V_i \supset B_\epsilon(x_i).$  So $A \subset \bigcup_{i=1}^n B_\epsilon(x_i) \subset \bigcup_{i=1}^n V_i.$  That is, $\mathcal{F}$ can be reduced to a finite subcover; so $A$ is compact.
