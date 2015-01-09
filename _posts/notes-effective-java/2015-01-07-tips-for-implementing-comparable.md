@@ -4,7 +4,8 @@ category: notes-effective-java
 title: Tips for Implementing Comparable
 ---
 
-`Comparable` has a contract similar to `equals`'s.
+`Comparable` has a contract similar to
+[`equals`'s](/notes-effective-java/2014-12-28/the-contract-of-equals/).
 
 * `Comparable.compareTo() == 0` should usually be consistent with `equals`,
   but if it is not, you should explicit comment about this.

@@ -4,7 +4,8 @@ category: notes-effective-java
 title: Tips for Implementing hashCode
 ---
 
-You must override `hashCode` in every class that overrides `equals`.
+You must override `hashCode` in every class that overrides
+[`equals`](/notes-effective-java/2014-12-28/the-contract-of-equals/).
 
 Tips for converting primitive types to `int`:
 
