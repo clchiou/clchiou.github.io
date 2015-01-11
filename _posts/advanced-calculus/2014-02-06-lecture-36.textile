@@ -1,0 +1,29 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 36
+---
+
+h3. Connected Set
+
+_Definition._ $A$ and $B$ are _separated_ in $\mathbb{X}$ if $A \cap B' = \emptyset$ and $A' \cap B = \emptyset,$ that is, they are disjoint and each is disjoint from the other's derived set.
+
+_Definition._ $C$ is _connected_ if $C$ is not a union of two separated sets.
+
+_Example._ $(-1, 0)$ and $(0, 1)$ are separated.
+
+_Example._ $\{ (x, y) \:|\: y = \sin\frac{1}{x}, x > 0 \}$ and $[-1, 0]$ are not separated.
+
+_Theorem._ $A$ and $B$ are sparated if and only if there exists two open sets $V_a$ and $V_b$ such that:
+# $V_a \cap V_b = \emptyset.$
+# $A \subset V_a$ and $B \subset V_b.$
+
+_Proof._ ($\Leftarrow$)
+Since $\overline{V_b} \supset V_a \supset A$ and $\overline{V_b}$ is closed, $A' \subset \overline{V_b}.$  And so $A' \cap B = \emptyset.$  For the same reason, $B' \cap A = \emptyset.$  So $A$ and $B$ are separated.
+
+_Proof._ ($\Rightarrow$)
+Since $A \cap B' = \emptyset,$ $A \subset \overline{B'}.$  Since $\overline{B'}$ is open, there exists a ball $B_{\delta(x)}(x) \subset \overline{B'}$ for all $x \in A.$  Let $V_a = \bigcup_{x \in A} B_{\frac{\delta(x)}{2}}(x).$  Then $V_a$ is open and $A \subset V_a.$  Also, we may derive $V_b.$
+Claim: $V_a \cap V_b = \emptyset.$
+Otherwise, there exists $z \in V_a \cap V_b.$  And there are corresponding $x \in A, z \in B_{\frac{\delta(x)}{2}}(x)$ and $y \in B, z \in B_{\frac{\delta(y)}{2}}(y).$  So, $d(x, y) < \frac{1}{2}(\delta(x) + \delta(y)).$  If $\delta(x) \geq \delta(y),$ then $d(x, y) < \frac{1}{2}(\delta(x) + \delta(x)) = \delta(x).$  So $y \in B_{\delta(x)}(x) \subset \overline{B'}.$  Then $y \notin B,$ which is a contradiction.  For the same reason, if $\delta(x) \leq \delta(y),$ then $x \notin A.$  So $V_a \cap V_b = \emptyset.$
+
+A set $A$ is open and closed does not imply it is either $\emptyset$ or $\mathbb{X}.$  For example, in a discrete metric space, $A = \{ x \}$ is open and closed.  Nevertheless, if $A$ is open, closed, and **connected**, then $A$ is either $\emptyset$ or $\mathbb{X}.$  (Proof omitted.)
