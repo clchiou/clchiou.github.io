@@ -1,0 +1,13 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 37
+---
+
+h3. Disconnected and Totally Disconnected
+
+_Definition._ A set $E$ is _totally disconnected_ if for all $x \ne y \in E,$ there exists $A, B \subset E$ such that $x \in A, y \in B,$ $A \cup B = E$ and $A$ and $B$ are separated.  (That is, $A \cup B$ forms a disconnected set.)
+
+_Example._ $(0, 1) \cup (1, 2)$ is disconnected but not totally disconnected.
+
+_Example._ Cantor set is totally disconnected.
