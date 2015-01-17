@@ -1,0 +1,30 @@
+---
+layout: post
+category: notes-a-course-in-game-theory
+title: Mixed Strategy Nash Equilibrium
+---
+
+Mixed equilibrium (and correlated equilibrium) models non-deterministic actions.
+
+A strategy game is a triple $\langle N, (A_i), (\succsim_i) \rangle.$  If we assume players satisfy the assumptions of von Neumann and Morgenstern, $\succsim_i$ (which is defined over lotteries on $A,$ by the way) can be represented by $E[u_i].$  So we have a new model of strategic interaction $\langle N, (A_i), (u_i) \rangle,$ to which we refer simply as a strategic game for convenience.
+
+Notations:
+
+* $\Delta(A_i)$ is the set of probability distributions over $A_i.$
+* Members of $\Delta(A_i)$ are mixed strategies of player $i.$
+* We assume **independent randomizations,** i.e., we draw an action from each mixed strategy independently.
+* For any finite set $X$ and $\delta \in \Delta(X),$ $\delta(x)$ is the probability that $\delta$ assigns to $x \in X.$
+* The support of $\delta$ is the set of elements $x \in X$ such that $\delta(x) > 0.$
+* Given a profile <notextile>$(\alpha_j)_{j \in N}$</notextile> of mixed strategies, <notextile>$E[u_i] = \sum_{a \in A} \left( \prod_{j \in N} \alpha_j(a_j) \right) u_i(a).$</notextile>
+
+_Definition._ The _mixed extension_ of a strategy game $\langle N, (A_i), (u_i) \rangle$ is the strategy game $\langle N, (\Delta(A_i)), (U_i) \rangle$ such that $U_i(\alpha) = E[u_i].$
+
+_Definition._ A _mixed strategy Nash equilibrium_ of a strategy game is a Nash equilibrium of its mixed extension.
+
+Given a game, its set of Nash equilibria is a "subset" of its set of mixed strategy Nash equilibria.
+
+_Lemma._ Given a finite game, <notextile>$\alpha^*$</notextile> is a mixed strategy Nash equilibrium if and only if for all $i,$ every pure strategy in the support of <notextile>$\alpha_i^*$</notextile> is a best response to <notextile>$\alpha_{-i}^*.$</notextile>
+
+It follows that every pure strategy in the support yields that player **the same payoff** (he is indifferent among pure strategies in the support).
+
+This mixed extension of a strictly competitive game is **not necessary** strictly competitive.
