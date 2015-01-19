@@ -1,0 +1,18 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 39
+---
+
+h3. Path Connectedness Implies Connectedness
+
+_Theorem._ In a metric space, if a set $S$ is path connected, it is connected.
+
+_Proof._ If $S$ is disconnected, there exists $A \ne \emptyset, B \ne \emptyset, A \cup B = S$ such that $A' \cap B = \emptyset$ and $A \cap B' = \emptyset.$  Pick any $x \in A$ and $y \in B.$  Since $S$ is path connected, there is a continuous function $\varphi : [a, b] \mapsto S$ such that $\varphi(a) = x$ and $\varphi(b) = y.$  Let $\Gamma_A = \Gamma \cap A$ and $\Gamma_B = \Gamma \cap B.$  Then $\varphi^{-1}(\Gamma_A) \ne \emptyset,$ $\varphi^{-1}(\Gamma_B) \ne \emptyset,$ and $[a, b] = \varphi^{-1}(\Gamma_A) \cup \varphi^{-1}(\Gamma_B).$
+Claim: $\varphi^{-1}(\Gamma_A)$ and $\varphi^{-1}(\Gamma_B)$ separates $[a, b]$ (this is a contradiction).
+Otherwise, if $\varphi^{-1}(\Gamma_A)' \cap \varphi^{-1}(\Gamma_B) \ne \emptyset.$  Pick an element $u$ of it and:
+
+# <notextile>$u \in \varphi^{-1}(\Gamma_A)'$</notextile> and so $\exists \alpha_n \in \varphi^{-1}(\Gamma_A), \alpha_n \to u.$  Since $\varphi$ is continuous, $\varphi(\alpha_n) \to \varphi(u).$  Since $\varphi(\alpha_n) \in A,$ $\varphi(u) \in A'.$
+# $u \in \varphi^{-1}(\Gamma_B)$ and so $\varphi(u) \in \Gamma_B \subset B.$  Thus $A' \cap B \ne \emptyset,$ which is a contradiction.
+
+Similarly, $\varphi^{-1}(\Gamma_A) \cap \varphi^{-1}(\Gamma_B)' = \emptyset.$
