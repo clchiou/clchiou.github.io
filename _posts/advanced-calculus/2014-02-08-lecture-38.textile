@@ -1,0 +1,21 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 38
+---
+
+h3. Path Connected
+
+_Definition._ A set $S$ is _path connected_ if for all $x, y \in S,$ there is a continuous curve $\Gamma \subset S$ joining $x, y.$
+
+_Example._ $A = [-1, 0]$ and $B = \{ (x, y) \:|\: y = \sin \frac{1}{x}, x > 0 \}.$  $S = A \cup B$ is connected but not path connected.
+
+_Theorem._ In a metric space, if a set is path connected, it is connected.
+
+_Theorem._ In $\mathbb{R}^n,$ an open and connected set is path connected.
+
+Path connectedness is "stronger" than connectedness in the senses that:
+* In any metric space, path connectedness implies connectedness.
+* You need $\mathbb{R}^n$ and openness for connectedness to imply path connectedness.
+
+Special property of $\mathbb{R}^1:$ Any open set is a countable union of disjoint open balls.
