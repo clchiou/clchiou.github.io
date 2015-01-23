@@ -1,0 +1,23 @@
+---
+layout: post
+category: advanced-calculus
+title: Lecture 40
+---
+
+h3. Connectedness and Path Connectedness
+
+_Lemma._ Given a connected metric space $(\mathbb{X}, d),$ if $A \subset \mathbb{X}$ is open and closed, then $A$ is either $\emptyset$ or $\mathbb{X}.$
+
+_Proof._ $A' = A$ since $A$ is closed and $\overline{A}' = \overline{A}$ since $A$ is open.  If $A$ is neither $\emptyset$ nor $\mathbb{X},$ then $\overline{A}$ is neither of them.  Since $A' \cap \overline{A} = A \cap \overline{A}' = \emptyset,$ $A$ and $\overline{A}$ separates $\mathbb{X},$ which is a contradiction.
+
+_Theorem._ Given an open set $S \subset \mathbb{R}^n,$ if $S$ is connected, then $S$ is path connected.  (Note: $S$ is a metric space by itself.)
+
+_Proof._
+If $S = \emptyset,$ we are done.  Otherwise, pick any $x_0 \in S.$  Let $A = \{ x \:|\: \exists \Gamma_x\ \text{joining}\ x, x_0 \}.$  (Note: $A$ is path connected.)
+Claim 1: $A \ne \emptyset.$
+This is obvious since $x_0 \in A.$
+Claim 2: $A$ is open.
+For all $x \in A,$ since $S$ is open, there is a ball $B_\delta(x) \subset S.$  For all $y \in B_\delta(x),$ you may join $x$ and $y$ with a line (due to property of $\mathbb{R}^n$). Thus $y \in A,$ i.e., $B_\delta(x) \subset A.$
+Claim 3: $A$ is closed, i.e., $A' = A.$
+For any $x \in A',$ for all $\delta > 0,$ $\exists x' \in B_\delta(x) \cap A - \{ x \}.$  Since $S$ is open, $\exists B_\delta(x) \subset S.$  Let $\Gamma_x$ be $\Gamma_{x'}$ joint with the line $\overline{xx'}.$  Then $\Gamma_x$ joins $x_0$ and $x.$  Thus $x \in A$ and $A$ is closed.
+So $A$ is not $\emptyset$ and is both open and closed.  By lemma above, $A = S$ and so $S$ is path connected.
