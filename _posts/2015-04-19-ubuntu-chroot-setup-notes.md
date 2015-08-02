@@ -4,7 +4,7 @@ title: Ubuntu Chroot Setup Notes
 ---
 
 I use `debootstrap` and this helper
-[script](https://github.com/clchiou/scripts/blob/master/enter-chroot.sh).
+[script](https://github.com/clchiou/scripts/blob/master/run-chroot.sh).
 
 Bootstrap:
 
@@ -16,6 +16,8 @@ Basic setup inside chroot as root:
     apt-get install locales dialog
     locale-gen en_US.UTF-8
 
-    useradd -m clchiou
+    vi /etc/hosts  # Add a line like "127.0.1.1 your_hostname"
+
+    useradd -m clchiou --shell /bin/bash  # Default is /bin/sh
     usermod -aG sudo clchiou
     passwd clchiou
