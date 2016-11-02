@@ -1,1 +1,6 @@
 _site/
+
+# Although in general you should track Gemfile.lock in version control
+# system so that everyone will depend on the same version of gems, it is
+# probably an overkill for Jekyll sites.
+Gemfile.lock
