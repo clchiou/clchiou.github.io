@@ -9,7 +9,7 @@ Use as less preprocessor as possible (or even better, use as less non-zero globa
 * You should use constant pointer:
 {% highlight c++ %}
 const char * const message = "Hello, World!";
-// Or const object:
+// Or const object
 const std::string message("Hello, World!");
 {% endhighlight %}
 
