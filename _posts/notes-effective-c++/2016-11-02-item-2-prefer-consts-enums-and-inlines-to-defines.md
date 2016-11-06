@@ -20,5 +20,5 @@ class Foo {
   // address from it.
   static const int SIZE = 5;
   int array[SIZE];  // You may use its value.
-}
+};
 {% endhighlight %}
