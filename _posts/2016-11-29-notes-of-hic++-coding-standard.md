@@ -47,8 +47,8 @@ Notes of the [High Integrity C++ Coding Standard](http://www.codingstandard.com/
 * Be aware and avoid data loss:
   * Implicit conversion
   * Shift operation
-  * Overflow in signed arithmetic
-  * Wraparound in unsigned arithmetic (sometimes you could be paranoid)
+  * Overflow in signed arithmetic (all of `+ - * /` ...)
+  * Wraparound in unsigned arithmetic (all of `+ - * /` ...) (sometimes you could be paranoid)
 
   ```
   uint32_t safe_inv_mult(uint32_t a, uint32_t b
