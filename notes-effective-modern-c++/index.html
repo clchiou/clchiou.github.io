@@ -1,0 +1,13 @@
+---
+layout: index
+title: Notes of Effective Modern C++
+summary: Reading notes of Effective Modern C++, 1st ed.
+---
+<div class="toc">
+{% for post in site.categories['notes-effective-modern-c++'] %}
+<article class="toc-item">
+  <h3 class="toc-title"><a class="toc-title" href="{{ post.url }}">{{ post.title }}</a></h3>
+  <a class="toc-snippet" href="{{ post.url }}"><p class="toc-snippet">{{ post.excerpt | strip_html }}</p></a>
+</article>
+{% endfor %}
+</div>
