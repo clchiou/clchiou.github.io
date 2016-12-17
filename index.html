@@ -6,7 +6,8 @@ summary: Notes, sample codes, etc.
 <div class="toc">
 <article class="toc-item">
   <h3 class="toc-title">Sitemap</h3>
-  {% for category in site.categories %}
+  {% assign sorted_categories = site.categories | sort %}
+  {% for category in sorted_categories %}
   <a href="/{{ category | first }}/">{{ category | first | replace: '-', ' ' }}</a><br />
   {% endfor %}
   <a href="/else/">else</a><br />
